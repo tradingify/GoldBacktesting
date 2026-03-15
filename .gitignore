@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+bars/
+Solid2026/backtest_report.html
+Solid2026/data/manifests/reports/html/
