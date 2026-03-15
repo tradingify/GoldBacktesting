@@ -1,0 +1,33 @@
+{
+    "dataset_id": "xauusd_5_mins",
+    "source": "ibkr",
+    "instrument": "XAUUSD",
+    "timeframe": "5m",
+    "timezone": "UTC",
+    "row_count": 73195,
+    "min_timestamp": "2025-02-19T15:00:00+00:00",
+    "max_timestamp": "2026-03-04T12:35:00+00:00",
+    "checksum": "e9a80fe003014a0939833e7448372b13",
+    "creation_timestamp": "2026-03-14T22:08:08.010088+00:00",
+    "notes": "Registered from processed parquet: xauusd_5_mins.parquet",
+    "schema": {
+        "datetime": "datetime64[ns, UTC]",
+        "open": "float64",
+        "high": "float64",
+        "low": "float64",
+        "close": "float64",
+        "volume": "int64"
+    },
+    "source_files": [
+        {
+            "path": "D:\\.openclaw\\GoldBacktesting\\Solid2026\\data\\processed\\gold\\bars\\xauusd_5_mins.parquet",
+            "size_bytes": 2156571,
+            "modified_at": "2026-03-09T20:20:20.413479+00:00"
+        }
+    ],
+    "build_recipe": {
+        "builder": "create_from_parquet",
+        "path": "D:\\.openclaw\\GoldBacktesting\\Solid2026\\data\\processed\\gold\\bars\\xauusd_5_mins.parquet"
+    },
+    "checksum_version": "v2"
+}

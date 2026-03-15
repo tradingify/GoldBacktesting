@@ -1,0 +1,30 @@
+# OPERATING RULES (MANDATORY)
+# 1. Discovery comes first; do not treat this spec as portfolio-ready by default.
+# 2. Screening is required before any promotion decision.
+# 3. Eligible successful single runs must receive automatic walk-forward and stress validation.
+# 4. Only validated survivors may become candidate_for_portfolio.
+# 5. Rejected runs must not be included in portfolio construction.
+
+experiment:
+  id: "DEMO_AUG2025_ZSCORE_15M"
+  description: "One-month real-data demo for ZScoreReversion on XAUUSD 15m."
+
+dataset:
+  manifest_id: "xauusd_15_mins"
+  instrument_id: "XAUUSD-IDEALPRO-USD"
+  start_time: "2025-08-01T00:00:00+00:00"
+  end_time: "2025-08-31T23:59:59+00:00"
+
+strategy:
+  class_path: "src.gold_research.strategies.mean_reversion.zscore_reversion.ZScoreReversion"
+  params:
+    timeframe: "15m"
+    period: 30
+    z_threshold: 2.0
+    trail_atr_multiplier: 1.5
+
+risk:
+  profile: "base"
+
+costs:
+  profile: "base"

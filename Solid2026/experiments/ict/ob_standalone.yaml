@@ -1,0 +1,60 @@
+# ── Order Block Standalone Validation ──────────────────────────────────────────
+# Hypothesis: OBs alone are NOT sufficient for a tradeable edge.
+# This experiment tests whether order block touches (without MTF confluence)
+# provide positive expectancy on XAUUSD 15m.
+#
+# Expected result: FAIL (OBs in isolation are insufficient — K's live system
+# requires score >= 6, which requires multi-layer confluence).
+#
+# WIN = confirms that MTF confluence is the required filter.
+# FAIL = OBs alone have edge → investigate (possible overfit to data).
+# ──────────────────────────────────────────────────────────────────────────────
+
+id: ob_standalone_m15
+version: "1.0"
+hypothesis: "Order blocks on M15 alone provide no edge without MTF confluence"
+expected_outcome: "FAIL"
+
+data:
+  symbol: XAUUSD
+  base_tf: M15
+  tf_stack: [M15]          # Only M15 OBs — no higher TF context
+  start: "2025-09-11"      # OOS start (6-month cutoff from 2026-03-11)
+  end: null                # End of dataset
+
+indicators:
+  - type: order_blocks
+    timeframes: [M15]
+    params:
+      disp_mult: 1.5
+      swing_len: 10
+      atr_window: 14
+      max_obs: 5
+      max_touches: 2
+
+entry:
+  signal: ORDER_BLOCK_ACTIVE
+  direction: both
+  min_score: 1             # Any single OB fires
+
+exit:
+  type: fixed_rr
+  rr: 2.0
+  sl_type: ob_edge         # Stop at opposite edge of the OB zone
+  sl_buffer_pct: 0.001
+
+risk:
+  risk_per_trade_pct: 1.0
+  max_concurrent: 1
+
+falsification_gates:
+  min_trades: 30
+  min_sharpe: 0.5
+  min_pf: 1.0
+  max_dd_pct: -20.0
+  min_win_rate: 35.0
+
+notes: |
+  Part of Phase 2 concept isolation experiments.
+  If OBs alone pass gates, investigate whether there's meaningful edge or
+  the gates are too loose.  Compare with full_confluence.yaml result.

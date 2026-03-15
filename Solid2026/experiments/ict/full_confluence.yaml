@@ -1,0 +1,113 @@
+# ── Full ICT Confluence Backtest ───────────────────────────────────────────────
+# Mirrors K's live system (confluence_scorer.py + k_scanner_v2.py).
+# All indicator layers active; minimum score threshold = 6.
+#
+# Hypothesis: Full ICT confluence (score >= 6) provides tradeable edge on
+# XAUUSD 15m with meaningful Sharpe and controlled drawdown.
+#
+# Expected result: PASS (this is the live system's validated setup).
+# ──────────────────────────────────────────────────────────────────────────────
+
+id: ict_full_confluence_m15
+version: "1.0"
+hypothesis: "Full ICT confluence (score >= 6) provides edge aligned with live system"
+expected_outcome: "PASS"
+
+data:
+  symbol: XAUUSD
+  base_tf: M15
+  tf_stack: [M15, H1, H4, D1]
+  start: "2025-09-11"
+  end: null
+
+# All indicator layers — mirrors confluence_scorer.py
+indicators:
+  - type: order_blocks
+    timeframes: [M15, H1, H4, D1]
+    params:
+      disp_mult: 1.5
+      swing_len: 10
+      atr_window: 14
+      max_obs: 5
+      max_touches: 2
+
+  - type: market_structure
+    timeframes: [M15, H1]
+    params:
+      length: 5
+
+  - type: fvg
+    timeframes: [M15, H1]
+    params:
+      join_consecutive: true
+
+  - type: liquidity_pools
+    timeframes: [M15, H1]
+    params:
+      swing_length: 10
+      range_percent: 0.01
+
+  - type: engulfing
+    timeframes: [M15, H1]
+    params:
+      mode: smart
+      req_color_swap: true
+      body_size_mult: 0.8
+
+  - type: ote
+    timeframes: [M15, H1, H4]
+    params:
+      swing_length: 10
+
+  - type: prev_high_low
+    timeframes: [D1]
+    params:
+      period: "1D"
+
+  - type: breaker_blocks
+    timeframes: [M15, H1]
+    params:
+      disp_mult: 1.5
+      swing_len: 10
+
+entry:
+  signal: CONFLUENCE_FIRE
+  direction: both
+  min_score: 6             # MIN_FIRE_SCORE — matches live system
+
+exit:
+  type: fixed_rr
+  rr: 2.0
+  sl_type: atr
+  atr_window: 14
+  atr_sl_mult: 1.0
+
+risk:
+  risk_per_trade_pct: 1.0
+  max_concurrent: 1
+
+falsification_gates:
+  min_trades: 30
+  min_sharpe: 0.5
+  min_pf: 1.0
+  max_dd_pct: -20.0
+  min_win_rate: 35.0
+
+# Parameter grid for sensitivity testing
+grid:
+  min_score:    [4, 5, 6, 7, 8]
+  rr:           [1.5, 2.0, 2.5, 3.0]
+  atr_sl_mult:  [0.75, 1.0, 1.25, 1.5]
+
+notes: |
+  Primary ICT confluence experiment.  This is the "parity test" for K's
+  live system.  Run after ob_standalone and fvg_standalone to contextualize.
+
+  Key parity risks:
+    - Live system uses M5 as base TF (k_scanner_v2 scans at M5 close).
+      This experiment uses M15.  Add M5 base_tf run for direct comparison.
+    - OB contestation scoring (ob_volume_scorer.py) not yet wired.
+    - Live system has MT5 execution timing; backtest uses bar-close entry.
+    - Spread cost: ~$0.30/trade baseline (from Asia Sweep cost stress).
+
+  Next: run scripts/run_ict_full_confluence.py (to be written in Phase 2).

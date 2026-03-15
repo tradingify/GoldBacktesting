@@ -1,0 +1,24 @@
+# Global Engine Defaults
+
+defaults:
+  instrument_token: "XAUUSD"
+  provider: "IDEALPRO"
+  currency: "USD"
+  base_currency: "XAU"
+  quote_currency: "USD"
+  tick_size: 0.01
+  price_precision: 2
+  size_precision: 0
+  size_increment: 1
+  min_quantity: 1
+  max_quantity: 1000000
+
+nautilus_engine:
+  log_level: "ERROR"
+  bypass_limits: true
+
+reporting:
+  export_formats:
+    - markdown
+    - json
+  save_directory: "data/manifests/reports/"

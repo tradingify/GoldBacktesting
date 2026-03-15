@@ -1,0 +1,233 @@
+[
+    {
+        "run_id": "run_EMAPullback_15m_7133",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.127935",
+        "reason": "Failed cost stress: harsh PF=0.93, decay=0.58",
+        "author": "System"
+    },
+    {
+        "run_id": "run_SqueezeBreakout_1h_5594",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.148184",
+        "reason": "Failed cost stress: harsh PF=0.19, decay=0.53",
+        "author": "System"
+    },
+    {
+        "run_id": "run_VwapReversion_15m_5848",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.166317",
+        "reason": "Failed cost stress: harsh PF=0.31, decay=0.61",
+        "author": "System"
+    },
+    {
+        "run_id": "run_VwapReversion_5m_5984",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.183775",
+        "reason": "Failed cost stress: harsh PF=0.43, decay=0.49",
+        "author": "System"
+    },
+    {
+        "run_id": "run_VwapReversion_15m_1092",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.528373",
+        "reason": "Failed cost stress: harsh PF=0.48, decay=0.41",
+        "author": "System"
+    },
+    {
+        "run_id": "run_Donchian_15m_9873",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.582855",
+        "reason": "Failed cost stress: harsh PF=0.77, decay=0.47",
+        "author": "System"
+    },
+    {
+        "run_id": "run_Donchian_1h_2970",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.600623",
+        "reason": "Failed cost stress: harsh PF=0.37, decay=0.62",
+        "author": "System"
+    },
+    {
+        "run_id": "run_BollReversion_5m_2611",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.652635",
+        "reason": "Failed cost stress: harsh PF=0.29, decay=0.65",
+        "author": "System"
+    },
+    {
+        "run_id": "run_EMAPullback_15m_3286",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.686995",
+        "reason": "Failed cost stress: harsh PF=0.82, decay=0.66",
+        "author": "System"
+    },
+    {
+        "run_id": "run_Donchian_15m_5547",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.709951",
+        "reason": "Failed cost stress: harsh PF=0.82, decay=0.77",
+        "author": "System"
+    },
+    {
+        "run_id": "run_ZScoreReversion_15m_9385",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.727439",
+        "reason": "Failed cost stress: harsh PF=0.83, decay=0.51",
+        "author": "System"
+    },
+    {
+        "run_id": "run_ATRBreakout_15m_3195",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.744542",
+        "reason": "Failed cost stress: harsh PF=0.31, decay=0.79",
+        "author": "System"
+    },
+    {
+        "run_id": "run_BollReversion_1h_2474",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.763980",
+        "reason": "Failed cost stress: harsh PF=1.43, decay=0.31",
+        "author": "System"
+    },
+    {
+        "run_id": "run_ATRBreakout_5m_4002",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.799808",
+        "reason": "Failed cost stress: harsh PF=0.86, decay=0.82",
+        "author": "System"
+    },
+    {
+        "run_id": "run_MACross_1h_4773",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.857704",
+        "reason": "Failed cost stress: harsh PF=0.48, decay=0.67",
+        "author": "System"
+    },
+    {
+        "run_id": "run_SqueezeBreakout_4h_3878",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:04:39.876790",
+        "reason": "Composite robustness score=78.5 \u2265 60. All 5 dimensions PASSED.",
+        "author": "System"
+    },
+    {
+        "run_id": "run_MACross_4h_7143",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.896382",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "author": "System"
+    },
+    {
+        "run_id": "run_VwapReversion_1h_2941",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.915125",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "author": "System"
+    },
+    {
+        "run_id": "run_Donchian_1h_1035",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.933163",
+        "reason": "Failed cost stress: harsh PF=0.53, decay=0.41",
+        "author": "System"
+    },
+    {
+        "run_id": "run_Donchian_4h_3581",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.953031",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "author": "System"
+    },
+    {
+        "run_id": "run_BollReversion_15m_6811",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:39.990325",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "author": "System"
+    },
+    {
+        "run_id": "run_EMAPullback_5m_3742",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:40.008402",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "author": "System"
+    },
+    {
+        "run_id": "run_ZScoreReversion_1h_8170",
+        "state": "rejected",
+        "promoted_at": "2026-03-09T21:04:40.028085",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "author": "System"
+    },
+    {
+        "run_id": "run_Donchian_5m_4244",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:14:39.802667",
+        "reason": "Sprint 03 selected \u2014 weight=0.082, robustness_score=87.3",
+        "author": "System"
+    },
+    {
+        "run_id": "run_SqueezeBreakout_5m_5587",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:14:39.812989",
+        "reason": "Sprint 03 selected \u2014 weight=0.133, robustness_score=85.2",
+        "author": "System"
+    },
+    {
+        "run_id": "run_Donchian_1h_8942",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:14:39.821653",
+        "reason": "Sprint 03 selected \u2014 weight=0.144, robustness_score=81.8",
+        "author": "System"
+    },
+    {
+        "run_id": "run_BollReversion_15m_2493",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:14:39.831141",
+        "reason": "Sprint 03 selected \u2014 weight=0.160, robustness_score=81.7",
+        "author": "System"
+    },
+    {
+        "run_id": "run_SqueezeBreakout_15m_2908",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:14:39.839609",
+        "reason": "Sprint 03 selected \u2014 weight=0.080, robustness_score=81.3",
+        "author": "System"
+    },
+    {
+        "run_id": "run_SqueezeBreakout_4h_3158",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:14:39.847673",
+        "reason": "Sprint 03 selected \u2014 weight=0.073, robustness_score=78.5",
+        "author": "System"
+    },
+    {
+        "run_id": "run_EMAPullback_4h_9868",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:14:39.855903",
+        "reason": "Sprint 03 selected \u2014 weight=0.089, robustness_score=78.3",
+        "author": "System"
+    },
+    {
+        "run_id": "run_Donchian_4h_2698",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:14:39.864889",
+        "reason": "Sprint 03 selected \u2014 weight=0.075, robustness_score=77.2",
+        "author": "System"
+    },
+    {
+        "run_id": "run_BollReversion_5m_8427",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:14:39.873501",
+        "reason": "Sprint 03 selected \u2014 weight=0.078, robustness_score=76.0",
+        "author": "System"
+    },
+    {
+        "run_id": "run_ZScoreReversion_15m_8360",
+        "state": "candidate_for_portfolio",
+        "promoted_at": "2026-03-09T21:14:39.881929",
+        "reason": "Sprint 03 selected \u2014 weight=0.085, robustness_score=74.5",
+        "author": "System"
+    }
+]

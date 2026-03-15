@@ -1,0 +1,30 @@
+# OPERATING RULES (MANDATORY)
+# 1. Discovery comes first; do not treat this spec as portfolio-ready by default.
+# 2. Screening is required before any promotion decision.
+# 3. Eligible successful single runs must receive automatic walk-forward and stress validation.
+# 4. Only validated survivors may become candidate_for_portfolio.
+# 5. Rejected runs must not be included in portfolio construction.
+
+experiment:
+  id: "MACROSS_GRID_01"
+  description: "Initial parameter sweep for Moving Average Crossover."
+  
+dataset:
+  manifest_id: "gold_h1_2015_2024"
+  instrument_id: "XAUUSD-IDEALPRO-USD"
+  
+strategy:
+  class_path: "src.gold_research.strategies.trend.moving_average_cross.MovingAverageCross"
+  
+  # When orchestration reads this, lists are Cartesian products (Grid Search), 
+  # single values are static constants.
+  params:
+    fast_period: [10, 20, 50]
+    slow_period: [50, 100, 200]
+    trail_atr_multiplier: [2.0, 3.0]
+    
+risk:
+  profile: "base"
+  
+costs:
+  profile: "optimistic" # Test edge purely algebraically first

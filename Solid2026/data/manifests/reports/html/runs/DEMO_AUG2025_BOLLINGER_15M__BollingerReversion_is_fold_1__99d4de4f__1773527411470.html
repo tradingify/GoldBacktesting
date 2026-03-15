@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Run Report - DEMO_AUG2025_BOLLINGER_15M__BollingerReversion_is_fold_1__99d4de4f__1773527411470</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; color: #1f2937; background: #f8fafc; }
+h1, h2, h3 { color: #0f172a; }
+.meta { color: #475569; margin-bottom: 20px; }
+.cards { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0 24px; }
+.card { background: white; border: 1px solid #cbd5e1; border-radius: 8px; padding: 14px; min-width: 180px; }
+.label { font-size: 12px; color: #64748b; text-transform: uppercase; }
+.value { font-size: 22px; font-weight: bold; margin-top: 6px; }
+table { border-collapse: collapse; width: 100%; background: white; }
+th, td { border: 1px solid #cbd5e1; padding: 8px 10px; font-size: 14px; text-align: left; vertical-align: top; }
+th { background: #e2e8f0; position: sticky; top: 0; }
+.pass { color: #166534; font-weight: bold; }
+.soft_fail { color: #92400e; font-weight: bold; }
+.hard_fail, .failed, .rejected { color: #b91c1c; font-weight: bold; }
+.candidate_for_portfolio, .completed { color: #1d4ed8; font-weight: bold; }
+.mono { font-family: Consolas, monospace; font-size: 12px; }
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul { line-height: 1.5; }
+</style>
+</head>
+<body>
+<h1>Run Report</h1>
+<div class="meta">DEMO_AUG2025_BOLLINGER_15M__BollingerReversion_is_fold_1__99d4de4f__1773527411470 | BollingerReversion | DEMO_AUG2025_BOLLINGER_15M</div>
+<div class="cards">
+  <div class="card"><div class="label">Promotion</div><div class="value hold_for_review">hold_for_review</div></div>
+  <div class="card"><div class="label">Sharpe</div><div class="value">14.52</div></div>
+  <div class="card"><div class="label">Net Profit</div><div class="value">$237.49</div></div>
+  <div class="card"><div class="label">Trades</div><div class="value">28</div></div>
+</div>
+<h2>Screening</h2>
+<pre>{
+  &quot;run_id&quot;: &quot;DEMO_AUG2025_BOLLINGER_15M__BollingerReversion_is_fold_1__99d4de4f__1773527411470&quot;,
+  &quot;gate_name&quot;: &quot;screening&quot;,
+  &quot;status&quot;: &quot;soft_fail&quot;,
+  &quot;score&quot;: 0.8,
+  &quot;promotion_state&quot;: &quot;hold_for_review&quot;,
+  &quot;reason&quot;: &quot;Run passed some but not all screening thresholds.&quot;,
+  &quot;details&quot;: {
+    &quot;thresholds&quot;: {
+      &quot;min_sharpe&quot;: 1.5,
+      &quot;min_trades&quot;: 150,
+      &quot;min_profit_factor&quot;: 1.2,
+      &quot;max_drawdown&quot;: 0.15
+    },
+    &quot;checks&quot;: {
+      &quot;min_sharpe&quot;: true,
+      &quot;min_trades&quot;: false,
+      &quot;min_profit_factor&quot;: true,
+      &quot;max_drawdown&quot;: true,
+      &quot;completed_status&quot;: true
+    }
+  }
+}</pre>
+<h2>Validation</h2>
+<pre>{
+  &quot;run_id&quot;: &quot;DEMO_AUG2025_BOLLINGER_15M__BollingerReversion_is_fold_1__99d4de4f__1773527411470&quot;,
+  &quot;automation_status&quot;: &quot;skipped&quot;,
+  &quot;reason&quot;: &quot;Run is not eligible for automatic validation.&quot;,
+  &quot;screening_status&quot;: &quot;soft_fail&quot;,
+  &quot;run_type&quot;: &quot;walkforward_is&quot;
+}</pre>
+<h2>Scorecard</h2>
+<pre>{
+  &quot;run_id&quot;: &quot;DEMO_AUG2025_BOLLINGER_15M__BollingerReversion_is_fold_1__99d4de4f__1773527411470&quot;,
+  &quot;total_trades&quot;: 28,
+  &quot;win_rate&quot;: 0.8571428571428571,
+  &quot;profit_factor&quot;: 9.579841040462428,
+  &quot;total_net_profit&quot;: 237.49,
+  &quot;sharpe&quot;: 14.521092653641679,
+  &quot;sortino&quot;: 15.068560596191281,
+  &quot;calmar&quot;: 131.824527184767,
+  &quot;max_dd_pct&quot;: -0.00016128479084412446,
+  &quot;status&quot;: &quot;COMPLETED&quot;
+}</pre>
+<h2>Artifacts</h2>
+<ul>
+  <li><span class="mono">D:\.openclaw\GoldBacktesting\Solid2026\results\raw_runs\DEMO_AUG2025_BOLLINGER_15M\DEMO_AUG2025_BOLLINGER_15M__BollingerReversion_is_fold_1__99d4de4f__1773527411470</span></li>
+  <li><span class="mono">D:\.openclaw\GoldBacktesting\Solid2026\results\raw_runs\DEMO_AUG2025_BOLLINGER_15M\DEMO_AUG2025_BOLLINGER_15M__BollingerReversion_is_fold_1__99d4de4f__1773527411470\scorecard.json</span></li>
+  <li><span class="mono">D:\.openclaw\GoldBacktesting\Solid2026\results\raw_runs\DEMO_AUG2025_BOLLINGER_15M\DEMO_AUG2025_BOLLINGER_15M__BollingerReversion_is_fold_1__99d4de4f__1773527411470\validation_summary.json</span></li>
+</ul>
+</body>
+</html>

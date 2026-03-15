@@ -1,0 +1,19 @@
+# Friction and Execution Cost Profiles
+
+profiles:
+  optimistic:
+    slippage: 0
+    commission_per_unit: 0.0000000
+    spread_markup_pips: 0.0
+
+  base:
+    slippage_ticks: 1
+    commission_per_unit: 0.00002  # $2 per 100k standard lot
+    spread_markup_pips: 0.5
+    
+  harsh:
+    slippage_ticks: 3
+    commission_per_unit: 0.00004
+    spread_markup_pips: 1.5
+
+active_profile: "base"

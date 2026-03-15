@@ -1,0 +1,26 @@
+# OPERATING RULES (MANDATORY)
+# 1. Discovery comes first; do not treat this spec as portfolio-ready by default.
+# 2. Screening is required before any promotion decision.
+# 3. Eligible successful single runs must receive automatic walk-forward and stress validation.
+# 4. Only validated survivors may become candidate_for_portfolio.
+# 5. Rejected runs must not be included in portfolio construction.
+
+experiment:
+  id: "SPRINT_00_BASELINE"
+  description: "Mock run to test engine piping."
+  
+dataset:
+  manifest_id: "gold_m5_2023"
+  instrument_id: "XAUUSD-IDEALPRO-USD"
+  
+strategy:
+  class_path: "src.gold_research.strategies.trend.moving_average_cross.MovingAverageCross"
+  params:
+    fast_period: 10
+    slow_period: 20
+    
+risk:
+  profile: "base"
+  
+costs:
+  profile: "base"

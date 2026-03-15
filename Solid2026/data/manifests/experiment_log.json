@@ -1,0 +1,299 @@
+[
+    {
+        "experiment_id": "SPRINT_02_ROB_EMAPullback_15m",
+        "run_id": "run_EMAPullback_15m_7133",
+        "timestamp": "2026-03-09T21:04:39.121149",
+        "strategy_name": "EMAPullback",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 2.4290845512816377,
+        "net_profit": 11747.160411889854
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_SqueezeBreakout_1h",
+        "run_id": "run_SqueezeBreakout_1h_5594",
+        "timestamp": "2026-03-09T21:04:39.133209",
+        "strategy_name": "SqueezeBreakout",
+        "dataset_manifest_id": "gold_1h",
+        "sharpe": 2.42523988396819,
+        "net_profit": 1075.1293132973615
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_VwapReversion_15m",
+        "run_id": "run_VwapReversion_15m_5848",
+        "timestamp": "2026-03-09T21:04:39.151617",
+        "strategy_name": "VwapReversion",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 2.277357757629583,
+        "net_profit": 1687.5549077092805
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_VwapReversion_5m",
+        "run_id": "run_VwapReversion_5m_5984",
+        "timestamp": "2026-03-09T21:04:39.170738",
+        "strategy_name": "VwapReversion",
+        "dataset_manifest_id": "gold_5m",
+        "sharpe": 2.265031887471884,
+        "net_profit": 403.7030299304075
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_BollReversion_15m",
+        "run_id": "run_BollReversion_15m_2493",
+        "timestamp": "2026-03-09T21:04:39.495595",
+        "strategy_name": "BollReversion",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 2.148157145072554,
+        "net_profit": 25249.156678373136
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_VwapReversion_15m",
+        "run_id": "run_VwapReversion_15m_1092",
+        "timestamp": "2026-03-09T21:04:39.512497",
+        "strategy_name": "VwapReversion",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 2.1356961144792965,
+        "net_profit": 1963.0361593206949
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_Donchian_5m",
+        "run_id": "run_Donchian_5m_4244",
+        "timestamp": "2026-03-09T21:04:39.531309",
+        "strategy_name": "Donchian",
+        "dataset_manifest_id": "gold_5m",
+        "sharpe": 2.129007977648747,
+        "net_profit": 30028.674696569742
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_SqueezeBreakout_15m",
+        "run_id": "run_SqueezeBreakout_15m_2908",
+        "timestamp": "2026-03-09T21:04:39.549769",
+        "strategy_name": "SqueezeBreakout",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 1.9518665554865677,
+        "net_profit": 22245.356798491805
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_Donchian_15m",
+        "run_id": "run_Donchian_15m_9873",
+        "timestamp": "2026-03-09T21:04:39.568376",
+        "strategy_name": "Donchian",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 1.9351329262064239,
+        "net_profit": 1370.7556044056373
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_Donchian_1h",
+        "run_id": "run_Donchian_1h_2970",
+        "timestamp": "2026-03-09T21:04:39.585978",
+        "strategy_name": "Donchian",
+        "dataset_manifest_id": "gold_1h",
+        "sharpe": 1.8795790909578347,
+        "net_profit": 4601.152091657479
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_SqueezeBreakout_4h",
+        "run_id": "run_SqueezeBreakout_4h_3158",
+        "timestamp": "2026-03-09T21:04:39.603857",
+        "strategy_name": "SqueezeBreakout",
+        "dataset_manifest_id": "gold_4h",
+        "sharpe": 1.860312009220602,
+        "net_profit": 1289.4970141151691
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_Donchian_1h",
+        "run_id": "run_Donchian_1h_8942",
+        "timestamp": "2026-03-09T21:04:39.621074",
+        "strategy_name": "Donchian",
+        "dataset_manifest_id": "gold_1h",
+        "sharpe": 1.8438812457695493,
+        "net_profit": 32024.10911274066
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_BollReversion_5m",
+        "run_id": "run_BollReversion_5m_2611",
+        "timestamp": "2026-03-09T21:04:39.638726",
+        "strategy_name": "BollReversion",
+        "dataset_manifest_id": "gold_5m",
+        "sharpe": 1.801065222037062,
+        "net_profit": 12387.939619132265
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_ZScoreReversion_15m",
+        "run_id": "run_ZScoreReversion_15m_8360",
+        "timestamp": "2026-03-09T21:04:39.655563",
+        "strategy_name": "ZScoreReversion",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 1.7911153224811813,
+        "net_profit": 9372.328709016429
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_EMAPullback_15m",
+        "run_id": "run_EMAPullback_15m_3286",
+        "timestamp": "2026-03-09T21:04:39.673079",
+        "strategy_name": "EMAPullback",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 1.671467478364173,
+        "net_profit": 12022.027448939116
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_Donchian_15m",
+        "run_id": "run_Donchian_15m_5547",
+        "timestamp": "2026-03-09T21:04:39.695534",
+        "strategy_name": "Donchian",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 1.6145944030902415,
+        "net_profit": 29319.88916096364
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_ZScoreReversion_15m",
+        "run_id": "run_ZScoreReversion_15m_9385",
+        "timestamp": "2026-03-09T21:04:39.712566",
+        "strategy_name": "ZScoreReversion",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 1.555190968218385,
+        "net_profit": 21346.79841341561
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_ATRBreakout_15m",
+        "run_id": "run_ATRBreakout_15m_3195",
+        "timestamp": "2026-03-09T21:04:39.730250",
+        "strategy_name": "ATRBreakout",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 1.521850351495595,
+        "net_profit": 4724.308538892694
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_BollReversion_1h",
+        "run_id": "run_BollReversion_1h_2474",
+        "timestamp": "2026-03-09T21:04:39.748887",
+        "strategy_name": "BollReversion",
+        "dataset_manifest_id": "gold_1h",
+        "sharpe": 1.517302890353899,
+        "net_profit": 21193.686062164812
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_BollReversion_5m",
+        "run_id": "run_BollReversion_5m_8427",
+        "timestamp": "2026-03-09T21:04:39.767593",
+        "strategy_name": "BollReversion",
+        "dataset_manifest_id": "gold_5m",
+        "sharpe": 1.5145994216438696,
+        "net_profit": 20583.41437655097
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_ATRBreakout_5m",
+        "run_id": "run_ATRBreakout_5m_4002",
+        "timestamp": "2026-03-09T21:04:39.785018",
+        "strategy_name": "ATRBreakout",
+        "dataset_manifest_id": "gold_5m",
+        "sharpe": 1.395694240614719,
+        "net_profit": 29178.282876245878
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_Donchian_4h",
+        "run_id": "run_Donchian_4h_2698",
+        "timestamp": "2026-03-09T21:04:39.803566",
+        "strategy_name": "Donchian",
+        "dataset_manifest_id": "gold_4h",
+        "sharpe": 1.3566026081028246,
+        "net_profit": 9215.262198100103
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_EMAPullback_4h",
+        "run_id": "run_EMAPullback_4h_9868",
+        "timestamp": "2026-03-09T21:04:39.823678",
+        "strategy_name": "EMAPullback",
+        "dataset_manifest_id": "gold_4h",
+        "sharpe": 1.2343722517192375,
+        "net_profit": 11963.076431350239
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_MACross_1h",
+        "run_id": "run_MACross_1h_4773",
+        "timestamp": "2026-03-09T21:04:39.842743",
+        "strategy_name": "MACross",
+        "dataset_manifest_id": "gold_1h",
+        "sharpe": 1.192412583449392,
+        "net_profit": 190.41255733309495
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_SqueezeBreakout_4h",
+        "run_id": "run_SqueezeBreakout_4h_3878",
+        "timestamp": "2026-03-09T21:04:39.861492",
+        "strategy_name": "SqueezeBreakout",
+        "dataset_manifest_id": "gold_4h",
+        "sharpe": 1.1608438559297256,
+        "net_profit": 4153.251588786219
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_MACross_4h",
+        "run_id": "run_MACross_4h_7143",
+        "timestamp": "2026-03-09T21:04:39.881135",
+        "strategy_name": "MACross",
+        "dataset_manifest_id": "gold_4h",
+        "sharpe": 1.1180693968992879,
+        "net_profit": 11728.24684741161
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_VwapReversion_1h",
+        "run_id": "run_VwapReversion_1h_2941",
+        "timestamp": "2026-03-09T21:04:39.899964",
+        "strategy_name": "VwapReversion",
+        "dataset_manifest_id": "gold_1h",
+        "sharpe": 1.0892671796151716,
+        "net_profit": 891.6819932796128
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_Donchian_1h",
+        "run_id": "run_Donchian_1h_1035",
+        "timestamp": "2026-03-09T21:04:39.918160",
+        "strategy_name": "Donchian",
+        "dataset_manifest_id": "gold_1h",
+        "sharpe": 0.8575841515702443,
+        "net_profit": 1057.2208178595513
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_Donchian_4h",
+        "run_id": "run_Donchian_4h_3581",
+        "timestamp": "2026-03-09T21:04:39.938003",
+        "strategy_name": "Donchian",
+        "dataset_manifest_id": "gold_4h",
+        "sharpe": 0.6748529504093832,
+        "net_profit": 25783.468264618452
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_SqueezeBreakout_5m",
+        "run_id": "run_SqueezeBreakout_5m_5587",
+        "timestamp": "2026-03-09T21:04:39.956215",
+        "strategy_name": "SqueezeBreakout",
+        "dataset_manifest_id": "gold_5m",
+        "sharpe": 0.6718643766102468,
+        "net_profit": 32915.06728518907
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_BollReversion_15m",
+        "run_id": "run_BollReversion_15m_6811",
+        "timestamp": "2026-03-09T21:04:39.975120",
+        "strategy_name": "BollReversion",
+        "dataset_manifest_id": "gold_15m",
+        "sharpe": 0.6460329346988691,
+        "net_profit": 8561.923697139657
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_EMAPullback_5m",
+        "run_id": "run_EMAPullback_5m_3742",
+        "timestamp": "2026-03-09T21:04:39.993239",
+        "strategy_name": "EMAPullback",
+        "dataset_manifest_id": "gold_5m",
+        "sharpe": 0.6007609335737589,
+        "net_profit": 4902.75816199882
+    },
+    {
+        "experiment_id": "SPRINT_02_ROB_ZScoreReversion_1h",
+        "run_id": "run_ZScoreReversion_1h_8170",
+        "timestamp": "2026-03-09T21:04:40.012068",
+        "strategy_name": "ZScoreReversion",
+        "dataset_manifest_id": "gold_1h",
+        "sharpe": 0.5639909440891442,
+        "net_profit": 18112.590897990976
+    }
+]

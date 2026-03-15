@@ -1,0 +1,105 @@
+{
+    "portfolio_id": "GOLD_PORT_01",
+    "assembled_at": "2026-03-09T21:14:39.883285",
+    "candidates_input": 10,
+    "pruned": [],
+    "selected": [
+        {
+            "label": "Donchian_5m",
+            "name": "Donchian",
+            "tf": "5m",
+            "robustness_score": 87.3,
+            "weight": 0.0824,
+            "run_id": "run_Donchian_5m_4244"
+        },
+        {
+            "label": "SqueezeBreakout_5m",
+            "name": "SqueezeBreakout",
+            "tf": "5m",
+            "robustness_score": 85.2,
+            "weight": 0.1334,
+            "run_id": "run_SqueezeBreakout_5m_5587"
+        },
+        {
+            "label": "Donchian_1h",
+            "name": "Donchian",
+            "tf": "1h",
+            "robustness_score": 81.8,
+            "weight": 0.1445,
+            "run_id": "run_Donchian_1h_8942"
+        },
+        {
+            "label": "BollReversion_15m",
+            "name": "BollReversion",
+            "tf": "15m",
+            "robustness_score": 81.7,
+            "weight": 0.16,
+            "run_id": "run_BollReversion_15m_2493"
+        },
+        {
+            "label": "SqueezeBreakout_15m",
+            "name": "SqueezeBreakout",
+            "tf": "15m",
+            "robustness_score": 81.3,
+            "weight": 0.0804,
+            "run_id": "run_SqueezeBreakout_15m_2908"
+        },
+        {
+            "label": "SqueezeBreakout_4h",
+            "name": "SqueezeBreakout",
+            "tf": "4h",
+            "robustness_score": 78.5,
+            "weight": 0.0732,
+            "run_id": "run_SqueezeBreakout_4h_3158"
+        },
+        {
+            "label": "EMAPullback_4h",
+            "name": "EMAPullback",
+            "tf": "4h",
+            "robustness_score": 78.3,
+            "weight": 0.0886,
+            "run_id": "run_EMAPullback_4h_9868"
+        },
+        {
+            "label": "Donchian_4h",
+            "name": "Donchian",
+            "tf": "4h",
+            "robustness_score": 77.2,
+            "weight": 0.0746,
+            "run_id": "run_Donchian_4h_2698"
+        },
+        {
+            "label": "BollReversion_5m",
+            "name": "BollReversion",
+            "tf": "5m",
+            "robustness_score": 76.0,
+            "weight": 0.0784,
+            "run_id": "run_BollReversion_5m_8427"
+        },
+        {
+            "label": "ZScoreReversion_15m",
+            "name": "ZScoreReversion",
+            "tf": "15m",
+            "robustness_score": 74.5,
+            "weight": 0.0846,
+            "run_id": "run_ZScoreReversion_15m_8360"
+        }
+    ],
+    "cluster_pairs_removed": [],
+    "portfolio_metrics": {
+        "sharpe": 6.7681,
+        "sortino": 8.8945,
+        "calmar": 21.4235,
+        "max_drawdown_pct": -0.0237,
+        "net_pnl": 66073.06,
+        "final_value": 166073.06,
+        "cagr_pct": 66.0731
+    },
+    "allocation_logic": "Inverse-volatility weighting on simulated daily return streams. Correlation threshold 0.70 for redundancy pruning.",
+    "assumptions": [
+        "Return series are synthetic (Monte Carlo drawn from stated Sharpe + drawdown targets).",
+        "No execution costs applied at portfolio level.",
+        "Strategies are assumed to trade on non-overlapping capital slices.",
+        "Walk-forward and regime tests already embedded via Sprint 02 gates."
+    ]
+}

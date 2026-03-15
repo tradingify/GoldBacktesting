@@ -1,0 +1,26 @@
+# OPERATING RULES (MANDATORY)
+# 1. Discovery comes first; do not treat this spec as portfolio-ready by default.
+# 2. Screening is required before any promotion decision.
+# 3. Eligible successful single runs must receive automatic walk-forward and stress validation.
+# 4. Only validated survivors may become candidate_for_portfolio.
+# 5. Rejected runs must not be included in portfolio construction.
+
+experiment:
+  id: sprint_06_combo_model_A
+  
+dataset:
+  manifest_id: "gold_primary"
+  instrument_id: "XAUUSD.IDEALPRO"
+  
+timeframes: ["15m", "1h"]
+
+strategy:
+  class_path: "src.gold_research.strategies.smc.confluence_scorer_strategy.ConfluenceScorerStrategy"
+  params:
+    instrument_id: ["XAUUSD-IDEALPRO-USD"]
+    window_size: [200]
+    stop_atr_multiplier: [2.0]
+    trailing_stop_multiplier: [2.0]
+    active_detectors:
+      - ["fvg", "order_blocks", "market_structure"]
+    min_fire_score: [6]

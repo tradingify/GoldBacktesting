@@ -1,0 +1,168 @@
+# ── ICT Full Confluence Backtest — M5 Base TF ──────────────────────────────────
+# Live-system-parity spec.  K's k_scanner_v2.py fires at M5 close; this matches.
+#
+# Hypothesis: Full 9-indicator ICT confluence (score >= 6) on M5 provides
+# tradeable edge on XAUUSD with Sharpe > 0.5 and MDD < 20%.
+#
+# Expected result: PASS — this mirrors the live system that K runs daily.
+#
+# Runner: scripts/run_ict_full_backtest_m5.py
+# Added: 2026-03-12 (session sweep Gate B wired; M5 TF stack complete)
+# ──────────────────────────────────────────────────────────────────────────────
+
+id: ict_full_confluence_m5
+version: "2.0"
+hypothesis: "Full ICT confluence (score >= 6) on M5 provides edge aligned with live system"
+expected_outcome: "PASS"
+
+data:
+  symbol: XAUUSD
+  base_tf: M5
+  tf_stack: [M5, M15, M30, H1, H4, D1]   # Full live-system stack
+  start: "2025-09-11"                      # 6-month OOS validation window
+  end: null
+  bars_dir: "D:\\.openclaw\\GoldBacktesting\\bars\\"
+
+# ── 9 indicator layers — mirrors confluence_scorer.py + ICT indicator suite ──
+indicators:
+  - type: order_blocks
+    timeframes: [M5, M15, M30, H1, H4, D1]
+    params:
+      disp_mult: 1.5
+      swing_len: 10
+      atr_window: 14
+      max_obs: 5
+      max_touches: 2
+
+  - type: market_structure
+    timeframes: [M5, M15]
+    params:
+      length: 5
+
+  - type: session_sweep        # K's Gate B trigger — NEW 2026-03-12
+    timeframes: [M5, M15, M30]
+    params:
+      lookback_sessions: 3
+      sweep_ttl_hours: 8
+
+  - type: fvg
+    timeframes: [M5, M15, H1]
+    params:
+      join_consecutive: true
+
+  - type: liquidity_pools
+    timeframes: [M5, M15, H1]
+    params:
+      swing_length: 10
+      range_percent: 0.01
+
+  - type: engulfing
+    timeframes: [M5, M15, M30, H1]
+    params:
+      mode: smart
+      req_color_swap: true
+      body_size_mult: 0.8
+    note: |
+      PARITY GAP: K gates engulfing on OB/sweep context being active.
+      Solid2026 counts unconditionally.  Net effect: more signals.
+      Fix: wire engulfing gate condition in confluence_strategy.py.
+
+  - type: ote
+    timeframes: [M5, M15, H1, H4]
+    params:
+      swing_length: 10
+
+  - type: prev_high_low
+    timeframes: [D1]
+    params:
+      period: "1D"
+
+  - type: breaker_blocks
+    timeframes: [M5, M15, H1]
+    params:
+      disp_mult: 1.5
+      swing_len: 10
+
+entry:
+  signal: CONFLUENCE_FIRE
+  direction: both
+  min_score: 6             # K's MIN_FIRE_SCORE (raised 2026-03-12)
+  timeframe: M5            # Entry at M5 bar close
+
+exit:
+  type: fixed_rr
+  rr: 2.0                  # K's MAX_RR hard cap
+  sl_type: atr
+  atr_window: 14
+  atr_sl_mult: 1.0
+
+risk:
+  risk_per_trade_pct: 1.0
+  max_concurrent: 1
+
+falsification_gates:
+  min_trades: 30
+  min_sharpe: 0.5
+  min_pf: 1.0
+  max_dd_pct: -20.0
+  min_win_rate: 35.0
+
+# Experiment grid (run_ict_full_backtest_m5.py executes runs 1-3 below)
+experiments:
+  - id: run_ICT_m5_score6_rr2
+    label: "Baseline (score≥6, RR 2.0)"
+    min_score: 6
+    rr: 2.0
+    atr_sl_mult: 1.0
+    priority: 1
+
+  - id: run_ICT_m5_score8_rr2
+    label: "High Conviction (score≥8, RR 2.0)"
+    min_score: 8
+    rr: 2.0
+    atr_sl_mult: 1.0
+    priority: 2
+
+  - id: run_ICT_m5_score6_rr3
+    label: "Wide TP (score≥6, RR 3.0)"
+    min_score: 6
+    rr: 3.0
+    atr_sl_mult: 1.0
+    priority: 3
+
+# Immediate next variant tests (Phase 2 ablations)
+next_variants:
+  - id: ict_m5_ob_only
+    description: "Order Block only — disable all other indicators"
+    purpose: "Isolate OB edge; determine if OB alone justifies score≥6"
+    change: "Remove all runners except _ob_runner from BarProcessor"
+
+  - id: ict_m5_sweep_structure_only
+    description: "Session Sweep + Market Structure only"
+    purpose: "Test Gate B + confirmation without OB requirement"
+    change: "Runners: _ss_runner + _ms_runner only"
+
+  - id: ict_m5_engulfing_gate
+    description: "Patch engulfing to K's gating logic"
+    purpose: "Reduce false positives from ungated engulfing"
+    change: >
+      In confluence_strategy.py ICTConfluenceSignal.generate():
+      filter active_events to exclude ENGULFING if no OB or sweep active.
+
+  - id: ict_m5_wfv_baseline
+    description: "Walk-forward 3-fold on baseline config"
+    purpose: "Validate OOS consistency (WFE >= 40%)"
+    prerequisite: "Baseline PASS required"
+
+notes: |
+  Key parity risks resolved vs v1.0 spec:
+    ✓ Base TF: now M5 (matches live scanner)
+    ✓ SessionSweep Gate B: wired as indicator adapter
+    ✓ M30 TF: added to stack for OB coverage
+    ✗ Engulfing gate: still unconditional (known parity gap)
+    ✗ OB volume scoring bonus: not wired (ob_volume_scorer.py not adapted)
+    ✗ Strong recovery candle (detect_strong_recovery): not adapted
+
+  Fire rate expectation: 1–5% of bars should fire.
+  If > 10%: engulfing gate fix is the priority.
+  If < 0.5%: score threshold is too high — test score≥4.

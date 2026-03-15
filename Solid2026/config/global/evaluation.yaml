@@ -1,0 +1,28 @@
+# Metric Pass/Fail Boundaries for Automated Promotion
+
+promotion_thresholds:
+  candidate_for_robustness:
+    min_sharpe: 1.5
+    min_trades: 150
+    min_profit_factor: 1.2
+    max_drawdown: 0.15
+    
+  candidate_for_portfolio:
+    min_wfo_efficiency: 0.50     # OOS must retain 50% of IS Sharpe
+    max_harsh_stress_decay: 0.50 # PnL must not decay more than 50% under harsh friction
+
+scoring_weights:
+  sharpe: 0.4
+  sortino: 0.3
+  calmar: 0.2
+  expectancy: 0.1
+
+validation_automation:
+  enabled: true
+  eligible_run_types: ["single"]
+  eligible_screening_statuses: ["pass", "soft_fail"]
+  walkforward_is_days: 14
+  walkforward_oos_days: 7
+  numeric_step_pct: 0.20
+  min_int_step: 1
+  min_float_step: 0.10

@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Run Report - DEMO_AUG2025_ZSCORE_15M__ZScoreReversion__4bf79221__1773526226906</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; color: #1f2937; background: #f8fafc; }
+h1, h2, h3 { color: #0f172a; }
+.meta { color: #475569; margin-bottom: 20px; }
+.cards { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0 24px; }
+.card { background: white; border: 1px solid #cbd5e1; border-radius: 8px; padding: 14px; min-width: 180px; }
+.label { font-size: 12px; color: #64748b; text-transform: uppercase; }
+.value { font-size: 22px; font-weight: bold; margin-top: 6px; }
+table { border-collapse: collapse; width: 100%; background: white; }
+th, td { border: 1px solid #cbd5e1; padding: 8px 10px; font-size: 14px; text-align: left; vertical-align: top; }
+th { background: #e2e8f0; position: sticky; top: 0; }
+.pass { color: #166534; font-weight: bold; }
+.soft_fail { color: #92400e; font-weight: bold; }
+.hard_fail, .failed, .rejected { color: #b91c1c; font-weight: bold; }
+.candidate_for_portfolio, .completed { color: #1d4ed8; font-weight: bold; }
+.mono { font-family: Consolas, monospace; font-size: 12px; }
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul { line-height: 1.5; }
+</style>
+</head>
+<body>
+<h1>Run Report</h1>
+<div class="meta">DEMO_AUG2025_ZSCORE_15M__ZScoreReversion__4bf79221__1773526226906 | ZScoreReversion | DEMO_AUG2025_ZSCORE_15M</div>
+<div class="cards">
+  <div class="card"><div class="label">Promotion</div><div class="value candidate_for_portfolio">candidate_for_portfolio</div></div>
+  <div class="card"><div class="label">Sharpe</div><div class="value">7.16</div></div>
+  <div class="card"><div class="label">Net Profit</div><div class="value">$335.47</div></div>
+  <div class="card"><div class="label">Trades</div><div class="value">97</div></div>
+</div>
+<h2>Screening</h2>
+<pre>{
+  &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion__4bf79221__1773526226906&quot;,
+  &quot;gate_name&quot;: &quot;screening&quot;,
+  &quot;status&quot;: &quot;soft_fail&quot;,
+  &quot;score&quot;: 0.8,
+  &quot;promotion_state&quot;: &quot;hold_for_review&quot;,
+  &quot;reason&quot;: &quot;Run passed some but not all screening thresholds.&quot;,
+  &quot;details&quot;: {
+    &quot;thresholds&quot;: {
+      &quot;min_sharpe&quot;: 1.5,
+      &quot;min_trades&quot;: 150,
+      &quot;min_profit_factor&quot;: 1.2,
+      &quot;max_drawdown&quot;: 0.15
+    },
+    &quot;checks&quot;: {
+      &quot;min_sharpe&quot;: true,
+      &quot;min_trades&quot;: false,
+      &quot;min_profit_factor&quot;: true,
+      &quot;max_drawdown&quot;: true,
+      &quot;completed_status&quot;: true
+    }
+  }
+}</pre>
+<h2>Validation</h2>
+<pre>{
+  &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion__4bf79221__1773526226906&quot;,
+  &quot;automation_status&quot;: &quot;completed&quot;,
+  &quot;walkforward&quot;: {
+    &quot;is_grid_results&quot;: [
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b12c0300__1773527438007&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b12c0300__1773527438007&quot;,
+          &quot;total_trades&quot;: 88,
+          &quot;win_rate&quot;: 0.5681818181818182,
+          &quot;profit_factor&quot;: 4.030785315985132,
+          &quot;total_net_profit&quot;: 260.8900000000001,
+          &quot;sharpe&quot;: 7.552162746351314,
+          &quot;sortino&quot;: 16.53002927999501,
+          &quot;calmar&quot;: 58.27701104078923,
+          &quot;max_dd_pct&quot;: -0.00013350410942020117,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__37c7d960__1773527439254&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__37c7d960__1773527439254&quot;,
+          &quot;total_trades&quot;: 84,
+          &quot;win_rate&quot;: 0.5476190476190477,
+          &quot;profit_factor&quot;: 3.450192030724917,
+          &quot;total_net_profit&quot;: 204.1500000000001,
+          &quot;sharpe&quot;: 6.989550552947995,
+          &quot;sortino&quot;: 14.028976593876184,
+          &quot;calmar&quot;: 47.51577225110604,
+          &quot;max_dd_pct&quot;: -0.00013545573963726304,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__d8ed706e__1773527440452&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__d8ed706e__1773527440452&quot;,
+          &quot;total_trades&quot;: 86,
+          &quot;win_rate&quot;: 0.5581395348837209,
+          &quot;profit_factor&quot;: 3.5650598042769124,
+          &quot;total_net_profit&quot;: 212.31000000000006,
+          &quot;sharpe&quot;: 7.116249545852345,
+          &quot;sortino&quot;: 14.144085654635598,
+          &quot;calmar&quot;: 48.86866740944302,
+          &quot;max_dd_pct&quot;: -0.0001335471286018429,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b8a49a90__1773527442003&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b8a49a90__1773527442003&quot;,
+          &quot;total_trades&quot;: 43,
+          &quot;win_rate&quot;: 0.4883720930232558,
+          &quot;profit_factor&quot;: 3.3316027088036115,
+          &quot;total_net_profit&quot;: 103.28999999999999,
+          &quot;sharpe&quot;: 6.317349588162146,
+          &quot;sortino&quot;: 19.123453178382796,
+          &quot;calmar&quot;: 46.58983934166973,
+          &quot;max_dd_pct&quot;: -0.00014330709370115566,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__ad3c7f7a__1773527443091&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__ad3c7f7a__1773527443091&quot;,
+          &quot;total_trades&quot;: 41,
+          &quot;win_rate&quot;: 0.4146341463414634,
+          &quot;profit_factor&quot;: 2.210468920392585,
+          &quot;total_net_profit&quot;: 66.60000000000001,
+          &quot;sharpe&quot;: 4.513956755043158,
+          &quot;sortino&quot;: 10.422654675033032,
+          &quot;calmar&quot;: 29.349578250585555,
+          &quot;max_dd_pct&quot;: -0.00016016878310421372,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__49240fe2__1773527444179&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__49240fe2__1773527444179&quot;,
+          &quot;total_trades&quot;: 42,
+          &quot;win_rate&quot;: 0.47619047619047616,
+          &quot;profit_factor&quot;: 2.9467268623024827,
+          &quot;total_net_profit&quot;: 86.23999999999998,
+          &quot;sharpe&quot;: 5.876758199546259,
+          &quot;sortino&quot;: 16.590855273815343,
+          &quot;calmar&quot;: 40.41971600448459,
+          &quot;max_dd_pct&quot;: -0.00014330709370115566,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__0d2ed97d__1773527445274&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__0d2ed97d__1773527445274&quot;,
+          &quot;total_trades&quot;: 23,
+          &quot;win_rate&quot;: 0.6086956521739131,
+          &quot;profit_factor&quot;: 4.4649326521133315,
+          &quot;total_net_profit&quot;: 74.60000000000001,
+          &quot;sharpe&quot;: 8.898659018203846,
+          &quot;sortino&quot;: 27.1319027477718,
+          &quot;calmar&quot;: 90.80605524781126,
+          &quot;max_dd_pct&quot;: -0.00010420515815531122,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__69eb9512__1773527446667&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__69eb9512__1773527446667&quot;,
+          &quot;total_trades&quot;: 22,
+          &quot;win_rate&quot;: 0.5454545454545454,
+          &quot;profit_factor&quot;: 2.740729101194218,
+          &quot;total_net_profit&quot;: 55.39000000000001,
+          &quot;sharpe&quot;: 6.4297828881823005,
+          &quot;sortino&quot;: 12.992604276908681,
+          &quot;calmar&quot;: 61.574101762862256,
+          &quot;max_dd_pct&quot;: -0.00012358085732520614,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__95376939__1773527447688&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__95376939__1773527447688&quot;,
+          &quot;total_trades&quot;: 23,
+          &quot;win_rate&quot;: 0.6086956521739131,
+          &quot;profit_factor&quot;: 4.474686483975848,
+          &quot;total_net_profit&quot;: 74.81,
+          &quot;sharpe&quot;: 8.921819811918121,
+          &quot;sortino&quot;: 27.200833028413197,
+          &quot;calmar&quot;: 91.03672929353736,
+          &quot;max_dd_pct&quot;: -0.00010420515815531122,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b78b0c9c__1773527448842&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b78b0c9c__1773527448842&quot;,
+          &quot;total_trades&quot;: 80,
+          &quot;win_rate&quot;: 0.6125,
+          &quot;profit_factor&quot;: 6.697005988023951,
+          &quot;total_net_profit&quot;: 285.41999999999996,
+          &quot;sharpe&quot;: 9.52563279656478,
+          &quot;sortino&quot;: 24.499265404214317,
+          &quot;calmar&quot;: 49.52469601573386,
+          &quot;max_dd_pct&quot;: -0.00016994009611611907,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b41ed41c__1773527450007&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b41ed41c__1773527450007&quot;,
+          &quot;total_trades&quot;: 76,
+          &quot;win_rate&quot;: 0.5394736842105263,
+          &quot;profit_factor&quot;: 4.185435219764435,
+          &quot;total_net_profit&quot;: 221.76999999999998,
+          &quot;sharpe&quot;: 7.329640610530469,
+          &quot;sortino&quot;: 15.516931275709306,
+          &quot;calmar&quot;: 28.13852871152901,
+          &quot;max_dd_pct&quot;: -0.0002392384884082918,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__036af46c__1773527451164&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__036af46c__1773527451164&quot;,
+          &quot;total_trades&quot;: 77,
+          &quot;win_rate&quot;: 0.6233766233766234,
+          &quot;profit_factor&quot;: 7.399052132701422,
+          &quot;total_net_profit&quot;: 270.04,
+          &quot;sharpe&quot;: 9.70283676196775,
+          &quot;sortino&quot;: 26.607859657856046,
+          &quot;calmar&quot;: 71.98857443906597,
+          &quot;max_dd_pct&quot;: -0.00011446037381855491,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__056f02b2__1773527452616&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__056f02b2__1773527452616&quot;,
+          &quot;total_trades&quot;: 42,
+          &quot;win_rate&quot;: 0.6428571428571429,
+          &quot;profit_factor&quot;: 5.48198347107438,
+          &quot;total_net_profit&quot;: 135.58,
+          &quot;sharpe&quot;: 9.003994953558555,
+          &quot;sortino&quot;: 20.419471088933197,
+          &quot;calmar&quot;: 105.76226141249545,
+          &quot;max_dd_pct&quot;: -7.849967030129743e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__4bf79221__1773527453659&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__4bf79221__1773527453659&quot;,
+          &quot;total_trades&quot;: 41,
+          &quot;win_rate&quot;: 0.5853658536585366,
+          &quot;profit_factor&quot;: 3.7713506139154163,
+          &quot;total_net_profit&quot;: 101.57,
+          &quot;sharpe&quot;: 7.718296833745,
+          &quot;sortino&quot;: 16.909159727831415,
+          &quot;calmar&quot;: 80.57684949252976,
+          &quot;max_dd_pct&quot;: -8.330418186994734e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__6f8ff737__1773527454724&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__6f8ff737__1773527454724&quot;,
+          &quot;total_trades&quot;: 40,
+          &quot;win_rate&quot;: 0.55,
+          &quot;profit_factor&quot;: 3.3573910719059072,
+          &quot;total_net_profit&quot;: 88.19,
+          &quot;sharpe&quot;: 6.962475291459008,
+          &quot;sortino&quot;: 15.568872280225014,
+          &quot;calmar&quot;: 70.66233387060963,
+          &quot;max_dd_pct&quot;: -8.520427725461341e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__5c0c2794__1773527455785&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__5c0c2794__1773527455785&quot;,
+          &quot;total_trades&quot;: 18,
+          &quot;win_rate&quot;: 0.5,
+          &quot;profit_factor&quot;: 3.0019297568506373,
+          &quot;total_net_profit&quot;: 51.87000000000002,
+          &quot;sharpe&quot;: 5.72229532630155,
+          &quot;sortino&quot;: 12.703303239286534,
+          &quot;calmar&quot;: 59.637816535110744,
+          &quot;max_dd_pct&quot;: -0.00012786624331170168,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__d8221116__1773527456892&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__d8221116__1773527456892&quot;,
+          &quot;total_trades&quot;: 18,
+          &quot;win_rate&quot;: 0.4444444444444444,
+          &quot;profit_factor&quot;: 2.346265761396702,
+          &quot;total_net_profit&quot;: 41.63999999999999,
+          &quot;sharpe&quot;: 5.21018920044254,
+          &quot;sortino&quot;: 11.520597848542426,
+          &quot;calmar&quot;: 54.08471594964458,
+          &quot;max_dd_pct&quot;: -0.00012787932191358256,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__0929d935__1773527457961&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__0929d935__1773527457961&quot;,
+          &quot;total_trades&quot;: 18,
+          &quot;win_rate&quot;: 0.5555555555555556,
+          &quot;profit_factor&quot;: 3.882731321128155,
+          &quot;total_net_profit&quot;: 58.26000000000001,
+          &quot;sharpe&quot;: 7.663963893337656,
+          &quot;sortino&quot;: 23.39448832689988,
+          &quot;calmar&quot;: 97.69001753666947,
+          &quot;max_dd_pct&quot;: -9.600481944184867e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b8d41a93__1773527458973&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b8d41a93__1773527458973&quot;,
+          &quot;total_trades&quot;: 85,
+          &quot;win_rate&quot;: 0.6352941176470588,
+          &quot;profit_factor&quot;: 7.011875761266748,
+          &quot;total_net_profit&quot;: 394.85999999999996,
+          &quot;sharpe&quot;: 8.835899075016671,
+          &quot;sortino&quot;: 17.607481111379542,
+          &quot;calmar&quot;: 47.06580723191408,
+          &quot;max_dd_pct&quot;: -0.00017500141186404974,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__fd562ae5__1773527460135&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__fd562ae5__1773527460135&quot;,
+          &quot;total_trades&quot;: 82,
+          &quot;win_rate&quot;: 0.6097560975609756,
+          &quot;profit_factor&quot;: 6.477338184023041,
+          &quot;total_net_profit&quot;: 361.34000000000003,
+          &quot;sharpe&quot;: 8.183235731606592,
+          &quot;sortino&quot;: 16.38692242658636,
+          &quot;calmar&quot;: 42.85772355713584,
+          &quot;max_dd_pct&quot;: -0.00017505985861492713,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__68ee084e__1773527461323&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__68ee084e__1773527461323&quot;,
+          &quot;total_trades&quot;: 82,
+          &quot;win_rate&quot;: 0.6097560975609756,
+          &quot;profit_factor&quot;: 6.538881309686222,
+          &quot;total_net_profit&quot;: 365.4000000000001,
+          &quot;sharpe&quot;: 8.313401500600243,
+          &quot;sortino&quot;: 16.662268457760383,
+          &quot;calmar&quot;: 43.57843060854537,
+          &quot;max_dd_pct&quot;: -0.0001750527773661684,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__8aeda7c6__1773527462856&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__8aeda7c6__1773527462856&quot;,
+          &quot;total_trades&quot;: 46,
+          &quot;win_rate&quot;: 0.5652173913043478,
+          &quot;profit_factor&quot;: 4.358873239436619,
+          &quot;total_net_profit&quot;: 119.24000000000001,
+          &quot;sharpe&quot;: 8.03639375239019,
+          &quot;sortino&quot;: 18.980976484657734,
+          &quot;calmar&quot;: 52.530747015975145,
+          &quot;max_dd_pct&quot;: -0.00012659946828226813,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__6d326638__1773527463862&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__6d326638__1773527463862&quot;,
+          &quot;total_trades&quot;: 44,
+          &quot;win_rate&quot;: 0.5,
+          &quot;profit_factor&quot;: 2.8458233890214797,
+          &quot;total_net_profit&quot;: 77.34,
+          &quot;sharpe&quot;: 6.341455859628288,
+          &quot;sortino&quot;: 13.993228125898517,
+          &quot;calmar&quot;: 32.6677139618362,
+          &quot;max_dd_pct&quot;: -0.00014770741491212382,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__274c9322__1773527465079&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__274c9322__1773527465079&quot;,
+          &quot;total_trades&quot;: 44,
+          &quot;win_rate&quot;: 0.5,
+          &quot;profit_factor&quot;: 2.91527446300716,
+          &quot;total_net_profit&quot;: 80.25000000000001,
+          &quot;sharpe&quot;: 6.5422047527184235,
+          &quot;sortino&quot;: 14.487602881046957,
+          &quot;calmar&quot;: 33.39186759193577,
+          &quot;max_dd_pct&quot;: -0.0001496075102969354,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__5dbd4c03__1773527466141&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__5dbd4c03__1773527466141&quot;,
+          &quot;total_trades&quot;: 20,
+          &quot;win_rate&quot;: 0.5,
+          &quot;profit_factor&quot;: 3.0830849478390467,
+          &quot;total_net_profit&quot;: 55.91000000000001,
+          &quot;sharpe&quot;: 5.59310372229206,
+          &quot;sortino&quot;: 11.600189859365045,
+          &quot;calmar&quot;: 60.76475965469745,
+          &quot;max_dd_pct&quot;: -0.00012109949138214202,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__665650cb__1773527467219&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__665650cb__1773527467219&quot;,
+          &quot;total_trades&quot;: 19,
+          &quot;win_rate&quot;: 0.42105263157894735,
+          &quot;profit_factor&quot;: 2.486543695192017,
+          &quot;total_net_profit&quot;: 49.160000000000004,
+          &quot;sharpe&quot;: 5.599120337888179,
+          &quot;sortino&quot;: 11.869265669783022,
+          &quot;calmar&quot;: 59.91669489863085,
+          &quot;max_dd_pct&quot;: -0.00012658420229144345,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__860e55cb__1773527468583&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__860e55cb__1773527468583&quot;,
+          &quot;total_trades&quot;: 19,
+          &quot;win_rate&quot;: 0.42105263157894735,
+          &quot;profit_factor&quot;: 2.486543695192017,
+          &quot;total_net_profit&quot;: 49.160000000000004,
+          &quot;sharpe&quot;: 5.599120337888179,
+          &quot;sortino&quot;: 11.869265669783022,
+          &quot;calmar&quot;: 59.91669489863085,
+          &quot;max_dd_pct&quot;: -0.00012658420229144345,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b12c0300__1773527470935&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b12c0300__1773527470935&quot;,
+          &quot;total_trades&quot;: 83,
+          &quot;win_rate&quot;: 0.6265060240963856,
+          &quot;profit_factor&quot;: 4.722869807913313,
+          &quot;total_net_profit&quot;: 226.75999999999993,
+          &quot;sharpe&quot;: 6.941821130639858,
+          &quot;sortino&quot;: 17.721795556785644,
+          &quot;calmar&quot;: 72.11594532275019,
+          &quot;max_dd_pct&quot;: -9.434032899314999e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__37c7d960__1773527472094&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__37c7d960__1773527472094&quot;,
+          &quot;total_trades&quot;: 83,
+          &quot;win_rate&quot;: 0.6385542168674698,
+          &quot;profit_factor&quot;: 4.555226337448559,
+          &quot;total_net_profit&quot;: 215.97999999999996,
+          &quot;sharpe&quot;: 7.314894234600444,
+          &quot;sortino&quot;: 16.52671372287026,
+          &quot;calmar&quot;: 68.60147343035977,
+          &quot;max_dd_pct&quot;: -9.4353506745398e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__d8ed706e__1773527473228&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__d8ed706e__1773527473228&quot;,
+          &quot;total_trades&quot;: 83,
+          &quot;win_rate&quot;: 0.6385542168674698,
+          &quot;profit_factor&quot;: 5.266046511627906,
+          &quot;total_net_profit&quot;: 229.29999999999995,
+          &quot;sharpe&quot;: 7.651703192240443,
+          &quot;sortino&quot;: 19.54953032102822,
+          &quot;calmar&quot;: 99.1810619600107,
+          &quot;max_dd_pct&quot;: -6.938068603419789e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b8a49a90__1773527474764&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b8a49a90__1773527474764&quot;,
+          &quot;total_trades&quot;: 44,
+          &quot;win_rate&quot;: 0.5454545454545454,
+          &quot;profit_factor&quot;: 5.033333333333334,
+          &quot;total_net_profit&quot;: 127.05000000000001,
+          &quot;sharpe&quot;: 7.167365452704879,
+          &quot;sortino&quot;: 26.64136196400954,
+          &quot;calmar&quot;: 92.08738050740794,
+          &quot;max_dd_pct&quot;: -8.286651364191878e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__ad3c7f7a__1773527475827&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__ad3c7f7a__1773527475827&quot;,
+          &quot;total_trades&quot;: 42,
+          &quot;win_rate&quot;: 0.47619047619047616,
+          &quot;profit_factor&quot;: 3.215774514448129,
+          &quot;total_net_profit&quot;: 93.54999999999998,
+          &quot;sharpe&quot;: 5.627017821787234,
+          &quot;sortino&quot;: 14.206800185580416,
+          &quot;calmar&quot;: 46.490753752293244,
+          &quot;max_dd_pct&quot;: -0.00012790413130352258,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__49240fe2__1773527476941&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__49240fe2__1773527476941&quot;,
+          &quot;total_trades&quot;: 42,
+          &quot;win_rate&quot;: 0.47619047619047616,
+          &quot;profit_factor&quot;: 3.215774514448129,
+          &quot;total_net_profit&quot;: 93.54999999999998,
+          &quot;sharpe&quot;: 5.627017821787234,
+          &quot;sortino&quot;: 14.206800185580416,
+          &quot;calmar&quot;: 46.490753752293244,
+          &quot;max_dd_pct&quot;: -0.00012790413130352258,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__0d2ed97d__1773527478015&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__0d2ed97d__1773527478015&quot;,
+          &quot;total_trades&quot;: 20,
+          &quot;win_rate&quot;: 0.55,
+          &quot;profit_factor&quot;: 3.6935078007045794,
+          &quot;total_net_profit&quot;: 53.519999999999996,
+          &quot;sharpe&quot;: 6.369304362348284,
+          &quot;sortino&quot;: 11.952220569222016,
+          &quot;calmar&quot;: 50.75933554587418,
+          &quot;max_dd_pct&quot;: -0.0001235923249166285,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__69eb9512__1773527479100&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__69eb9512__1773527479100&quot;,
+          &quot;total_trades&quot;: 20,
+          &quot;win_rate&quot;: 0.55,
+          &quot;profit_factor&quot;: 3.362858580775038,
+          &quot;total_net_profit&quot;: 46.95,
+          &quot;sharpe&quot;: 6.226948453349867,
+          &quot;sortino&quot;: 11.502630642630798,
+          &quot;calmar&quot;: 48.84999314123752,
+          &quot;max_dd_pct&quot;: -0.00012359824490492817,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 24,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__95376939__1773527480282&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__95376939__1773527480282&quot;,
+          &quot;total_trades&quot;: 20,
+          &quot;win_rate&quot;: 0.55,
+          &quot;profit_factor&quot;: 6.632567849686847,
+          &quot;total_net_profit&quot;: 53.96000000000001,
+          &quot;sharpe&quot;: 7.735158957162369,
+          &quot;sortino&quot;: 30.69117507780136,
+          &quot;calmar&quot;: 183.22861283604672,
+          &quot;max_dd_pct&quot;: -3.577942325370426e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b78b0c9c__1773527481457&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b78b0c9c__1773527481457&quot;,
+          &quot;total_trades&quot;: 92,
+          &quot;win_rate&quot;: 0.6304347826086957,
+          &quot;profit_factor&quot;: 5.78217299578059,
+          &quot;total_net_profit&quot;: 272.01,
+          &quot;sharpe&quot;: 8.015303392679757,
+          &quot;sortino&quot;: 21.323528482448253,
+          &quot;calmar&quot;: 45.588544006976896,
+          &quot;max_dd_pct&quot;: -0.0001618948605668153,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b41ed41c__1773527483033&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b41ed41c__1773527483033&quot;,
+          &quot;total_trades&quot;: 92,
+          &quot;win_rate&quot;: 0.6304347826086957,
+          &quot;profit_factor&quot;: 5.823136427566807,
+          &quot;total_net_profit&quot;: 274.34000000000003,
+          &quot;sharpe&quot;: 8.070096787092906,
+          &quot;sortino&quot;: 21.509730015419116,
+          &quot;calmar&quot;: 45.98709834178183,
+          &quot;max_dd_pct&quot;: -0.00016189109560049635,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__036af46c__1773527484195&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__036af46c__1773527484195&quot;,
+          &quot;total_trades&quot;: 92,
+          &quot;win_rate&quot;: 0.6304347826086957,
+          &quot;profit_factor&quot;: 7.265321375186846,
+          &quot;total_net_profit&quot;: 335.32000000000005,
+          &quot;sharpe&quot;: 8.595477228653298,
+          &quot;sortino&quot;: 28.711395272475965,
+          &quot;calmar&quot;: 56.59628591171352,
+          &quot;max_dd_pct&quot;: -0.0001612939585886315,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__056f02b2__1773527485515&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__056f02b2__1773527485515&quot;,
+          &quot;total_trades&quot;: 47,
+          &quot;win_rate&quot;: 0.574468085106383,
+          &quot;profit_factor&quot;: 3.127904008169517,
+          &quot;total_net_profit&quot;: 83.35,
+          &quot;sharpe&quot;: 5.71302614251511,
+          &quot;sortino&quot;: 13.115642635995618,
+          &quot;calmar&quot;: 47.57961689028792,
+          &quot;max_dd_pct&quot;: -9.965529463483845e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__4bf79221__1773527486698&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__4bf79221__1773527486698&quot;,
+          &quot;total_trades&quot;: 47,
+          &quot;win_rate&quot;: 0.574468085106383,
+          &quot;profit_factor&quot;: 3.0656114373244825,
+          &quot;total_net_profit&quot;: 80.91,
+          &quot;sharpe&quot;: 5.610798872584655,
+          &quot;sortino&quot;: 12.746072632224816,
+          &quot;calmar&quot;: 46.23899807939671,
+          &quot;max_dd_pct&quot;: -9.965595206919706e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__6f8ff737__1773527487858&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__6f8ff737__1773527487858&quot;,
+          &quot;total_trades&quot;: 46,
+          &quot;win_rate&quot;: 0.5434782608695652,
+          &quot;profit_factor&quot;: 3.3889816360600995,
+          &quot;total_net_profit&quot;: 85.85999999999999,
+          &quot;sharpe&quot;: 5.779486577207607,
+          &quot;sortino&quot;: 15.77809654204731,
+          &quot;calmar&quot;: 57.816891830057486,
+          &quot;max_dd_pct&quot;: -8.62618722523655e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__5c0c2794__1773527489056&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__5c0c2794__1773527489056&quot;,
+          &quot;total_trades&quot;: 23,
+          &quot;win_rate&quot;: 0.4782608695652174,
+          &quot;profit_factor&quot;: 2.9338053097345136,
+          &quot;total_net_profit&quot;: 54.63000000000001,
+          &quot;sharpe&quot;: 4.922569211091267,
+          &quot;sortino&quot;: 11.195823726886355,
+          &quot;calmar&quot;: 43.35899389156846,
+          &quot;max_dd_pct&quot;: -0.00012789205790328568,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__d8221116__1773527490508&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__d8221116__1773527490508&quot;,
+          &quot;total_trades&quot;: 23,
+          &quot;win_rate&quot;: 0.4782608695652174,
+          &quot;profit_factor&quot;: 2.7012389380530974,
+          &quot;total_net_profit&quot;: 48.06,
+          &quot;sharpe&quot;: 4.792859021773608,
+          &quot;sortino&quot;: 10.78434704687488,
+          &quot;calmar&quot;: 41.76547275190592,
+          &quot;max_dd_pct&quot;: -0.00012789818384572536,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__0929d935__1773527491649&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__0929d935__1773527491649&quot;,
+          &quot;total_trades&quot;: 22,
+          &quot;win_rate&quot;: 0.5,
+          &quot;profit_factor&quot;: 4.1660011409013125,
+          &quot;total_net_profit&quot;: 55.5,
+          &quot;sharpe&quot;: 5.838394967424886,
+          &quot;sortino&quot;: 21.29898437658656,
+          &quot;calmar&quot;: 117.67351526749742,
+          &quot;max_dd_pct&quot;: -5.197738463991407e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b8d41a93__1773527492759&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b8d41a93__1773527492759&quot;,
+          &quot;total_trades&quot;: 99,
+          &quot;win_rate&quot;: 0.6060606060606061,
+          &quot;profit_factor&quot;: 4.147378832838775,
+          &quot;total_net_profit&quot;: 254.56,
+          &quot;sharpe&quot;: 6.9967095628476565,
+          &quot;sortino&quot;: 15.35992729897964,
+          &quot;calmar&quot;: 37.74051357897497,
+          &quot;max_dd_pct&quot;: -0.0001754374578442604,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__fd562ae5__1773527494036&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__fd562ae5__1773527494036&quot;,
+          &quot;total_trades&quot;: 98,
+          &quot;win_rate&quot;: 0.5918367346938775,
+          &quot;profit_factor&quot;: 4.186610042468149,
+          &quot;total_net_profit&quot;: 255.12,
+          &quot;sharpe&quot;: 7.0415797835874585,
+          &quot;sortino&quot;: 15.833135518986932,
+          &quot;calmar&quot;: 38.21206684770923,
+          &quot;max_dd_pct&quot;: -0.00017543861400905775,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__68ee084e__1773527495232&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__68ee084e__1773527495232&quot;,
+          &quot;total_trades&quot;: 98,
+          &quot;win_rate&quot;: 0.5918367346938775,
+          &quot;profit_factor&quot;: 4.275968992248062,
+          &quot;total_net_profit&quot;: 253.56000000000003,
+          &quot;sharpe&quot;: 7.05453364125713,
+          &quot;sortino&quot;: 16.384248040002007,
+          &quot;calmar&quot;: 37.98159814600805,
+          &quot;max_dd_pct&quot;: -0.00017543861400905775,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__8aeda7c6__1773527496591&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__8aeda7c6__1773527496591&quot;,
+          &quot;total_trades&quot;: 52,
+          &quot;win_rate&quot;: 0.6153846153846154,
+          &quot;profit_factor&quot;: 3.771622934888241,
+          &quot;total_net_profit&quot;: 114.08000000000001,
+          &quot;sharpe&quot;: 6.161618910921374,
+          &quot;sortino&quot;: 13.162344837676848,
+          &quot;calmar&quot;: 64.3030491513788,
+          &quot;max_dd_pct&quot;: -8.284624935350094e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__6d326638__1773527498246&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__6d326638__1773527498246&quot;,
+          &quot;total_trades&quot;: 51,
+          &quot;win_rate&quot;: 0.6078431372549019,
+          &quot;profit_factor&quot;: 3.5719144800777447,
+          &quot;total_net_profit&quot;: 105.85999999999999,
+          &quot;sharpe&quot;: 5.997397444588521,
+          &quot;sortino&quot;: 12.998550113996432,
+          &quot;calmar&quot;: 63.50389420556325,
+          &quot;max_dd_pct&quot;: -8.285139936921151e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.0,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__274c9322__1773527499488&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__274c9322__1773527499488&quot;,
+          &quot;total_trades&quot;: 50,
+          &quot;win_rate&quot;: 0.58,
+          &quot;profit_factor&quot;: 3.0769603097773475,
+          &quot;total_net_profit&quot;: 85.82,
+          &quot;sharpe&quot;: 5.422517446020699,
+          &quot;sortino&quot;: 11.093387343890281,
+          &quot;calmar&quot;: 46.63065734382032,
+          &quot;max_dd_pct&quot;: -8.963161108075702e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.2
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__5dbd4c03__1773527500599&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__5dbd4c03__1773527500599&quot;,
+          &quot;total_trades&quot;: 24,
+          &quot;win_rate&quot;: 0.5,
+          &quot;profit_factor&quot;: 3.1486013986013988,
+          &quot;total_net_profit&quot;: 61.45000000000001,
+          &quot;sharpe&quot;: 6.807133687412812,
+          &quot;sortino&quot;: 24.04355079768815,
+          &quot;calmar&quot;: 116.58883276208165,
+          &quot;max_dd_pct&quot;: -6.77740899653946e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.5
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__665650cb__1773527502040&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__665650cb__1773527502040&quot;,
+          &quot;total_trades&quot;: 24,
+          &quot;win_rate&quot;: 0.5,
+          &quot;profit_factor&quot;: 2.7546650351789537,
+          &quot;total_net_profit&quot;: 57.36000000000001,
+          &quot;sharpe&quot;: 6.308005443160764,
+          &quot;sortino&quot;: 19.344834967824298,
+          &quot;calmar&quot;: 79.24119925714416,
+          &quot;max_dd_pct&quot;: -9.40654121479881e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;is&quot;,
+        &quot;params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 36,
+          &quot;z_threshold&quot;: 2.4,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__860e55cb__1773527503194&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__860e55cb__1773527503194&quot;,
+          &quot;total_trades&quot;: 24,
+          &quot;win_rate&quot;: 0.5,
+          &quot;profit_factor&quot;: 2.619244391971664,
+          &quot;total_net_profit&quot;: 54.86,
+          &quot;sharpe&quot;: 6.039200340515326,
+          &quot;sortino&quot;: 18.182602565155253,
+          &quot;calmar&quot;: 76.33089308917593,
+          &quot;max_dd_pct&quot;: -9.40654121479881e-05,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      }
+    ],
+    &quot;oos_live_track&quot;: [
+      {
+        &quot;fold&quot;: 0,
+        &quot;phase&quot;: &quot;oos&quot;,
+        &quot;selected_params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;is_run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__036af46c__1773527451164&quot;,
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_oos_fold_0__036af46c__1773527469633&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_oos_fold_0__036af46c__1773527469633&quot;,
+          &quot;total_trades&quot;: 50,
+          &quot;win_rate&quot;: 0.52,
+          &quot;profit_factor&quot;: 4.8590704647676155,
+          &quot;total_net_profit&quot;: 154.43999999999997,
+          &quot;sharpe&quot;: 7.062942068902341,
+          &quot;sortino&quot;: 24.31903794905343,
+          &quot;calmar&quot;: 49.331124270514245,
+          &quot;max_dd_pct&quot;: -0.0001615855005143181,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      },
+      {
+        &quot;fold&quot;: 1,
+        &quot;phase&quot;: &quot;oos&quot;,
+        &quot;selected_params&quot;: {
+          &quot;timeframe&quot;: &quot;15m&quot;,
+          &quot;period&quot;: 30,
+          &quot;z_threshold&quot;: 1.6,
+          &quot;trail_atr_multiplier&quot;: 1.8
+        },
+        &quot;is_run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__036af46c__1773527484195&quot;,
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_oos_fold_1__036af46c__1773527504269&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_oos_fold_1__036af46c__1773527504269&quot;,
+          &quot;total_trades&quot;: 38,
+          &quot;win_rate&quot;: 0.47368421052631576,
+          &quot;profit_factor&quot;: 1.1886571361612375,
+          &quot;total_net_profit&quot;: 16.10000000000001,
+          &quot;sharpe&quot;: 1.0085596269216672,
+          &quot;sortino&quot;: 0.8950394393875548,
+          &quot;calmar&quot;: 2.4235941278785904,
+          &quot;max_dd_pct&quot;: -0.000674953321312436,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        }
+      }
+    ],
+    &quot;summary&quot;: {
+      &quot;folds&quot;: 2,
+      &quot;wfo_efficiency&quot;: 0.5884806065704242,
+      &quot;is_run_ids&quot;: [
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b12c0300__1773527438007&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__37c7d960__1773527439254&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__d8ed706e__1773527440452&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b8a49a90__1773527442003&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__ad3c7f7a__1773527443091&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__49240fe2__1773527444179&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__0d2ed97d__1773527445274&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__69eb9512__1773527446667&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__95376939__1773527447688&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b78b0c9c__1773527448842&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b41ed41c__1773527450007&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__036af46c__1773527451164&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__056f02b2__1773527452616&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__4bf79221__1773527453659&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__6f8ff737__1773527454724&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__5c0c2794__1773527455785&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__d8221116__1773527456892&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__0929d935__1773527457961&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__b8d41a93__1773527458973&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__fd562ae5__1773527460135&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__68ee084e__1773527461323&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__8aeda7c6__1773527462856&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__6d326638__1773527463862&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__274c9322__1773527465079&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__5dbd4c03__1773527466141&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__665650cb__1773527467219&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_0__860e55cb__1773527468583&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b12c0300__1773527470935&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__37c7d960__1773527472094&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__d8ed706e__1773527473228&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b8a49a90__1773527474764&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__ad3c7f7a__1773527475827&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__49240fe2__1773527476941&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__0d2ed97d__1773527478015&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__69eb9512__1773527479100&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__95376939__1773527480282&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b78b0c9c__1773527481457&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b41ed41c__1773527483033&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__036af46c__1773527484195&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__056f02b2__1773527485515&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__4bf79221__1773527486698&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__6f8ff737__1773527487858&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__5c0c2794__1773527489056&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__d8221116__1773527490508&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__0929d935__1773527491649&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__b8d41a93__1773527492759&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__fd562ae5__1773527494036&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__68ee084e__1773527495232&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__8aeda7c6__1773527496591&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__6d326638__1773527498246&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__274c9322__1773527499488&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__5dbd4c03__1773527500599&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__665650cb__1773527502040&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_is_fold_1__860e55cb__1773527503194&quot;
+      ],
+      &quot;oos_run_ids&quot;: [
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_oos_fold_0__036af46c__1773527469633&quot;,
+        &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_oos_fold_1__036af46c__1773527504269&quot;
+      ]
+    }
+  },
+  &quot;stress&quot;: {
+    &quot;parent_run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion__4bf79221__1773526226906&quot;,
+    &quot;suite_results&quot;: [
+      {
+        &quot;stress_profile&quot;: &quot;optimistic&quot;,
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_optimistic__ec5e4d77__1773527505262&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_optimistic__ec5e4d77__1773527505262&quot;,
+          &quot;total_trades&quot;: 97,
+          &quot;win_rate&quot;: 0.5876288659793815,
+          &quot;profit_factor&quot;: 5.105617427487455,
+          &quot;total_net_profit&quot;: 335.47,
+          &quot;sharpe&quot;: 7.164824047993162,
+          &quot;sortino&quot;: 22.599216522345937,
+          &quot;calmar&quot;: 63.15760046899525,
+          &quot;max_dd_pct&quot;: -0.00014129816969435038,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        },
+        &quot;run_dir&quot;: &quot;D:\\.openclaw\\GoldBacktesting\\Solid2026\\results\\raw_runs\\DEMO_AUG2025_ZSCORE_15M\\DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_optimistic__ec5e4d77__1773527505262&quot;
+      },
+      {
+        &quot;stress_profile&quot;: &quot;base&quot;,
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_base__3ac0d1af__1773527506725&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_base__3ac0d1af__1773527506725&quot;,
+          &quot;total_trades&quot;: 97,
+          &quot;win_rate&quot;: 0.5876288659793815,
+          &quot;profit_factor&quot;: 5.105617427487455,
+          &quot;total_net_profit&quot;: 335.47,
+          &quot;sharpe&quot;: 7.164824047993162,
+          &quot;sortino&quot;: 22.599216522345937,
+          &quot;calmar&quot;: 63.15760046899525,
+          &quot;max_dd_pct&quot;: -0.00014129816969435038,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        },
+        &quot;run_dir&quot;: &quot;D:\\.openclaw\\GoldBacktesting\\Solid2026\\results\\raw_runs\\DEMO_AUG2025_ZSCORE_15M\\DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_base__3ac0d1af__1773527506725&quot;
+      },
+      {
+        &quot;stress_profile&quot;: &quot;harsh&quot;,
+        &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_harsh__a4f994be__1773527508179&quot;,
+        &quot;status&quot;: &quot;COMPLETED&quot;,
+        &quot;scorecard&quot;: {
+          &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_harsh__a4f994be__1773527508179&quot;,
+          &quot;total_trades&quot;: 97,
+          &quot;win_rate&quot;: 0.5876288659793815,
+          &quot;profit_factor&quot;: 5.105617427487455,
+          &quot;total_net_profit&quot;: 335.47,
+          &quot;sharpe&quot;: 7.164824047993162,
+          &quot;sortino&quot;: 22.599216522345937,
+          &quot;calmar&quot;: 63.15760046899525,
+          &quot;max_dd_pct&quot;: -0.00014129816969435038,
+          &quot;status&quot;: &quot;COMPLETED&quot;
+        },
+        &quot;run_dir&quot;: &quot;D:\\.openclaw\\GoldBacktesting\\Solid2026\\results\\raw_runs\\DEMO_AUG2025_ZSCORE_15M\\DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_harsh__a4f994be__1773527508179&quot;
+      }
+    ],
+    &quot;summary&quot;: {
+      &quot;profiles&quot;: [
+        &quot;optimistic&quot;,
+        &quot;base&quot;,
+        &quot;harsh&quot;
+      ],
+      &quot;stress_decay&quot;: 1.0,
+      &quot;baseline_run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_base__3ac0d1af__1773527506725&quot;,
+      &quot;harsh_run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion_harsh__a4f994be__1773527508179&quot;
+    }
+  },
+  &quot;decision&quot;: {
+    &quot;gate_name&quot;: &quot;validation&quot;,
+    &quot;status&quot;: &quot;pass&quot;,
+    &quot;promotion_state&quot;: &quot;candidate_for_portfolio&quot;,
+    &quot;reason&quot;: &quot;Run family passed walk-forward and harsh-friction validation.&quot;,
+    &quot;details&quot;: {
+      &quot;thresholds&quot;: {
+        &quot;min_wfo_efficiency&quot;: 0.5,
+        &quot;max_harsh_stress_decay&quot;: 0.5
+      },
+      &quot;checks&quot;: {
+        &quot;wfo_efficiency&quot;: true,
+        &quot;stress_decay&quot;: true
+      },
+      &quot;summary&quot;: {
+        &quot;wfo_efficiency&quot;: 0.5884806065704242,
+        &quot;stress_decay&quot;: 1.0,
+        &quot;walkforward_folds&quot;: 2
+      }
+    }
+  }
+}</pre>
+<h2>Scorecard</h2>
+<pre>{
+  &quot;run_id&quot;: &quot;DEMO_AUG2025_ZSCORE_15M__ZScoreReversion__4bf79221__1773526226906&quot;,
+  &quot;total_trades&quot;: 97,
+  &quot;win_rate&quot;: 0.5876288659793815,
+  &quot;profit_factor&quot;: 5.105617427487455,
+  &quot;total_net_profit&quot;: 335.47,
+  &quot;sharpe&quot;: 7.164824047993162,
+  &quot;sortino&quot;: 22.599216522345937,
+  &quot;calmar&quot;: 63.15760046899525,
+  &quot;max_dd_pct&quot;: -0.00014129816969435038,
+  &quot;status&quot;: &quot;COMPLETED&quot;
+}</pre>
+<h2>Artifacts</h2>
+<ul>
+  <li><span class="mono">D:\.openclaw\GoldBacktesting\Solid2026\results\raw_runs\DEMO_AUG2025_ZSCORE_15M\DEMO_AUG2025_ZSCORE_15M__ZScoreReversion__4bf79221__1773526226906</span></li>
+  <li><span class="mono">D:\.openclaw\GoldBacktesting\Solid2026\results\raw_runs\DEMO_AUG2025_ZSCORE_15M\DEMO_AUG2025_ZSCORE_15M__ZScoreReversion__4bf79221__1773526226906\scorecard.json</span></li>
+  <li><span class="mono">D:\.openclaw\GoldBacktesting\Solid2026\results\raw_runs\DEMO_AUG2025_ZSCORE_15M\DEMO_AUG2025_ZSCORE_15M__ZScoreReversion__4bf79221__1773526226906\validation_summary.json</span></li>
+</ul>
+</body>
+</html>

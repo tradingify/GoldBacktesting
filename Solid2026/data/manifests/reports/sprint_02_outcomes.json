@@ -1,0 +1,3525 @@
+[
+    {
+        "run_id": "run_EMAPullback_15m_7133",
+        "name": "EMAPullback",
+        "tf": "15m",
+        "params": {
+            "fast_period": 21,
+            "slow_period": 50,
+            "pullback_tolerance": 0.0005,
+            "trail_atr_multiplier": 1.5
+        },
+        "base_metrics": {
+            "run_id": "run_EMAPullback_15m_7133",
+            "total_trades": 174,
+            "win_rate": 0.583565750140808,
+            "profit_factor": 1.8914950115614637,
+            "total_net_profit": 11747.160411889854,
+            "sharpe": 2.4290845512816377,
+            "sortino": -0.08978414969753967,
+            "calmar": 1.8447605620372562,
+            "max_dd_pct": 0.2301193734445362,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.627,
+                        "oos_sharpe": 1.4041
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.4684,
+                        "oos_sharpe": 1.1217
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.5234,
+                        "oos_sharpe": 1.4116
+                    }
+                ],
+                "avg_wfe": 0.5396,
+                "avg_oos_sharpe": 1.3125,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.6479,
+                "base_sharpe": 2.289,
+                "harsh_sharpe": 1.319,
+                "harsh_pf": 0.9303,
+                "stress_decay": 0.5762,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.9116,
+                    2.4374,
+                    2.2908,
+                    2.4108,
+                    2.6504
+                ],
+                "cv": 0.1068,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 2.2602
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.744
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 2.3968
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 2.6027
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 2.5332
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.2743
+                    }
+                ],
+                "spread": 0.8587,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.6931,
+                "ranging_sharpe": 0.9585,
+                "crisis_sharpe": 0.5085,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.5085,
+                "passed": true
+            }
+        },
+        "composite_score": 81.47,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.93, decay=0.58",
+        "timestamp": "2026-03-09T21:04:39.130387"
+    },
+    {
+        "run_id": "run_SqueezeBreakout_1h_5594",
+        "name": "SqueezeBreakout",
+        "tf": "1h",
+        "params": {
+            "bb_period": 20,
+            "kc_period": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_SqueezeBreakout_1h_5594",
+            "total_trades": 42,
+            "win_rate": 0.5533571467036075,
+            "profit_factor": 1.0483964075787418,
+            "total_net_profit": 1075.1293132973615,
+            "sharpe": 2.42523988396819,
+            "sortino": 2.391472456977458,
+            "calmar": 0.1263962586074756,
+            "max_dd_pct": 0.25698454934909387,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.5907,
+                        "oos_sharpe": 1.6719
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.4517,
+                        "oos_sharpe": 1.368
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.8276,
+                        "oos_sharpe": 1.8809
+                    }
+                ],
+                "avg_wfe": 0.6233,
+                "avg_oos_sharpe": 1.6403,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.6333,
+                "base_sharpe": 2.4248,
+                "harsh_sharpe": 1.2881,
+                "harsh_pf": 0.1858,
+                "stress_decay": 0.5312,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    2.2917,
+                    2.7295,
+                    2.4571,
+                    2.9044,
+                    2.4839
+                ],
+                "cv": 0.1082,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 3.0237
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.9016
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 2.3924
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 2.3436
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 2.4722
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.7148
+                    }
+                ],
+                "spread": 1.1221,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.7971,
+                "ranging_sharpe": 1.2847,
+                "crisis_sharpe": 0.9462,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.9462,
+                "passed": true
+            }
+        },
+        "composite_score": 81.91,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.19, decay=0.53",
+        "timestamp": "2026-03-09T21:04:39.149441"
+    },
+    {
+        "run_id": "run_VwapReversion_15m_5848",
+        "name": "VwapReversion",
+        "tf": "15m",
+        "params": {
+            "return_threshold_pct": 0.005,
+            "hold_bars": 24
+        },
+        "base_metrics": {
+            "run_id": "run_VwapReversion_15m_5848",
+            "total_trades": 357,
+            "win_rate": 0.3153931044666414,
+            "profit_factor": 1.1431102528799786,
+            "total_net_profit": 1687.5549077092805,
+            "sharpe": 2.277357757629583,
+            "sortino": 1.9171195729780797,
+            "calmar": 1.593436938710588,
+            "max_dd_pct": 0.39305845285676644,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.4633,
+                        "oos_sharpe": 1.3105
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.7288,
+                        "oos_sharpe": 1.6262
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.3395,
+                        "oos_sharpe": 0.7169
+                    }
+                ],
+                "avg_wfe": 0.5105,
+                "avg_oos_sharpe": 1.2179,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.5101,
+                "base_sharpe": 2.263,
+                "harsh_sharpe": 1.3892,
+                "harsh_pf": 0.3144,
+                "stress_decay": 0.6139,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    2.2177,
+                    2.3607,
+                    1.8123,
+                    2.5815,
+                    2.6036
+                ],
+                "cv": 0.1281,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.9955
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 2.2786
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 2.4635
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 2.5614
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 2.4136
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.7366
+                    }
+                ],
+                "spread": 0.7411,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.9757,
+                "ranging_sharpe": 1.321,
+                "crisis_sharpe": 0.1091,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.1091,
+                "passed": true
+            }
+        },
+        "composite_score": 81.42,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.31, decay=0.61",
+        "timestamp": "2026-03-09T21:04:39.168209"
+    },
+    {
+        "run_id": "run_VwapReversion_5m_5984",
+        "name": "VwapReversion",
+        "tf": "5m",
+        "params": {
+            "return_threshold_pct": 0.005,
+            "hold_bars": 24
+        },
+        "base_metrics": {
+            "run_id": "run_VwapReversion_5m_5984",
+            "total_trades": 444,
+            "win_rate": 0.5556998626373446,
+            "profit_factor": 1.0193114385511273,
+            "total_net_profit": 403.7030299304075,
+            "sharpe": 2.265031887471884,
+            "sortino": -0.2830717484147454,
+            "calmar": 0.1777043445467541,
+            "max_dd_pct": 0.0960253475506214,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.6777,
+                        "oos_sharpe": 1.2594
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.6876,
+                        "oos_sharpe": 1.5419
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.6383,
+                        "oos_sharpe": 1.4421
+                    }
+                ],
+                "avg_wfe": 0.6679,
+                "avg_oos_sharpe": 1.4145,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.5237,
+                "base_sharpe": 2.2333,
+                "harsh_sharpe": 1.0911,
+                "harsh_pf": 0.4344,
+                "stress_decay": 0.4886,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    2.4322,
+                    2.4064,
+                    2.1829,
+                    2.2926,
+                    1.7344
+                ],
+                "cv": 0.1146,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.7668
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 2.0413
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.9703
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.6974
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 2.3234
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.3092
+                    }
+                ],
+                "spread": 0.626,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.7958,
+                "ranging_sharpe": 1.4759,
+                "crisis_sharpe": 0.8676,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.8676,
+                "passed": true
+            }
+        },
+        "composite_score": 84.98,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.43, decay=0.49",
+        "timestamp": "2026-03-09T21:04:39.184490"
+    },
+    {
+        "run_id": "run_BollReversion_15m_2493",
+        "name": "BollReversion",
+        "tf": "15m",
+        "params": {
+            "period": 20,
+            "std_devs": 2.0,
+            "hold_bars": 5
+        },
+        "base_metrics": {
+            "run_id": "run_BollReversion_15m_2493",
+            "total_trades": 342,
+            "win_rate": 0.5295700732364357,
+            "profit_factor": 2.2460205704553986,
+            "total_net_profit": 25249.156678373136,
+            "sharpe": 2.148157145072554,
+            "sortino": 1.2974900965268548,
+            "calmar": -0.3949216796097774,
+            "max_dd_pct": 0.051383534388393375,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.5164,
+                        "oos_sharpe": 1.4441
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.5945,
+                        "oos_sharpe": 1.3089
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.6986,
+                        "oos_sharpe": 1.5439
+                    }
+                ],
+                "avg_wfe": 0.6032,
+                "avg_oos_sharpe": 1.4323,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.3187,
+                "base_sharpe": 2.1617,
+                "harsh_sharpe": 1.219,
+                "harsh_pf": 1.1769,
+                "stress_decay": 0.5639,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.3696,
+                    2.0469,
+                    2.2949,
+                    2.5102,
+                    2.2938
+                ],
+                "cv": 0.1851,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.8369
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 2.0428
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 2.5163
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.8096
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 2.2362
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.4215
+                    }
+                ],
+                "spread": 0.7067,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.0421,
+                "ranging_sharpe": 1.4088,
+                "crisis_sharpe": 0.8368,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.8368,
+                "passed": true
+            }
+        },
+        "composite_score": 81.65,
+        "promotion": "candidate_for_portfolio",
+        "reason": "Composite robustness score=81.65 \u2265 60. All 5 dimensions PASSED.",
+        "timestamp": "2026-03-09T21:04:39.509786"
+    },
+    {
+        "run_id": "run_VwapReversion_15m_1092",
+        "name": "VwapReversion",
+        "tf": "15m",
+        "params": {
+            "return_threshold_pct": 0.005,
+            "hold_bars": 12
+        },
+        "base_metrics": {
+            "run_id": "run_VwapReversion_15m_1092",
+            "total_trades": 475,
+            "win_rate": 0.49331808128095644,
+            "profit_factor": 1.154352113390476,
+            "total_net_profit": 1963.0361593206949,
+            "sharpe": 2.1356961144792965,
+            "sortino": 2.396824736121709,
+            "calmar": -0.6356423303947146,
+            "max_dd_pct": 0.12911165094154742,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.5401,
+                        "oos_sharpe": 0.7613
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.6817,
+                        "oos_sharpe": 1.5751
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.4998,
+                        "oos_sharpe": 1.0324
+                    }
+                ],
+                "avg_wfe": 0.5739,
+                "avg_oos_sharpe": 1.1229,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.1296,
+                "base_sharpe": 2.1813,
+                "harsh_sharpe": 0.8955,
+                "harsh_pf": 0.4764,
+                "stress_decay": 0.4105,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.9919,
+                    2.4008,
+                    2.3912,
+                    1.9567,
+                    1.9302
+                ],
+                "cv": 0.1005,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 2.1599
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.8941
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.7545
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 2.6492
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.5221
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.1242
+                    }
+                ],
+                "spread": 1.1271,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.483,
+                "ranging_sharpe": 1.3824,
+                "crisis_sharpe": 0.6077,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.6077,
+                "passed": true
+            }
+        },
+        "composite_score": 75.44,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.48, decay=0.41",
+        "timestamp": "2026-03-09T21:04:39.529190"
+    },
+    {
+        "run_id": "run_Donchian_5m_4244",
+        "name": "Donchian",
+        "tf": "5m",
+        "params": {
+            "channel_lookback": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_Donchian_5m_4244",
+            "total_trades": 374,
+            "win_rate": 0.4042652889497158,
+            "profit_factor": 2.1641559263428505,
+            "total_net_profit": 30028.674696569742,
+            "sharpe": 2.129007977648747,
+            "sortino": 0.0945856786483652,
+            "calmar": 1.5984758775118681,
+            "max_dd_pct": 0.26570056427511995,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.281,
+                        "oos_sharpe": 0.5201
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.6296,
+                        "oos_sharpe": 1.403
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.9719,
+                        "oos_sharpe": 1.903
+                    }
+                ],
+                "avg_wfe": 0.6275,
+                "avg_oos_sharpe": 1.2754,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.3341,
+                "base_sharpe": 2.2345,
+                "harsh_sharpe": 1.2344,
+                "harsh_pf": 1.3223,
+                "stress_decay": 0.5524,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.9008,
+                    2.0097,
+                    1.7823,
+                    1.9844,
+                    2.0089
+                ],
+                "cv": 0.0989,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.9085
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.8905
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.9034
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.7759
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 2.1838
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.2243
+                    }
+                ],
+                "spread": 0.4484,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.6661,
+                "ranging_sharpe": 1.2281,
+                "crisis_sharpe": 1.045,
+                "positive_regimes": 3,
+                "worst_sharpe": 1.045,
+                "passed": true
+            }
+        },
+        "composite_score": 87.31,
+        "promotion": "candidate_for_portfolio",
+        "reason": "Composite robustness score=87.31 \u2265 60. All 5 dimensions PASSED.",
+        "timestamp": "2026-03-09T21:04:39.547151"
+    },
+    {
+        "run_id": "run_SqueezeBreakout_15m_2908",
+        "name": "SqueezeBreakout",
+        "tf": "15m",
+        "params": {
+            "bb_period": 20,
+            "kc_period": 20,
+            "trail_atr_multiplier": 3.0
+        },
+        "base_metrics": {
+            "run_id": "run_SqueezeBreakout_15m_2908",
+            "total_trades": 195,
+            "win_rate": 0.3168188131163271,
+            "profit_factor": 2.2421091251322993,
+            "total_net_profit": 22245.356798491805,
+            "sharpe": 1.9518665554865677,
+            "sortino": 2.0664379526448933,
+            "calmar": -0.10364745244395035,
+            "max_dd_pct": 0.25210018361352615,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.932,
+                        "oos_sharpe": 1.6332
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.3261,
+                        "oos_sharpe": 0.6331
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 1.0717,
+                        "oos_sharpe": 1.4763
+                    }
+                ],
+                "avg_wfe": 0.7766,
+                "avg_oos_sharpe": 1.2475,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.2284,
+                "base_sharpe": 1.9175,
+                "harsh_sharpe": 1.0041,
+                "harsh_pf": 1.0258,
+                "stress_decay": 0.5236,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    2.7233,
+                    1.9584,
+                    2.1396,
+                    1.9367,
+                    1.809
+                ],
+                "cv": 0.1849,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 2.2684
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 2.1692
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 2.5523
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.9866
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 2.6609
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.6738
+                    }
+                ],
+                "spread": 0.9871,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.7543,
+                "ranging_sharpe": 0.9513,
+                "crisis_sharpe": 0.5343,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.5343,
+                "passed": true
+            }
+        },
+        "composite_score": 81.32,
+        "promotion": "candidate_for_portfolio",
+        "reason": "Composite robustness score=81.32 \u2265 60. All 5 dimensions PASSED.",
+        "timestamp": "2026-03-09T21:04:39.565397"
+    },
+    {
+        "run_id": "run_Donchian_15m_9873",
+        "name": "Donchian",
+        "tf": "15m",
+        "params": {
+            "channel_lookback": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_Donchian_15m_9873",
+            "total_trades": 138,
+            "win_rate": 0.51004542988302,
+            "profit_factor": 1.1872330517881364,
+            "total_net_profit": 1370.7556044056373,
+            "sharpe": 1.9351329262064239,
+            "sortino": -0.47383148365945954,
+            "calmar": -0.3673949123444349,
+            "max_dd_pct": 0.1950007035565834,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.9421,
+                        "oos_sharpe": 1.6278
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.7579,
+                        "oos_sharpe": 1.343
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.5899,
+                        "oos_sharpe": 1.4017
+                    }
+                ],
+                "avg_wfe": 0.7633,
+                "avg_oos_sharpe": 1.4575,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.0914,
+                "base_sharpe": 2.0226,
+                "harsh_sharpe": 0.9447,
+                "harsh_pf": 0.7676,
+                "stress_decay": 0.4671,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.9416,
+                    1.3741,
+                    2.0845,
+                    1.7302,
+                    1.839
+                ],
+                "cv": 0.144,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 2.4181
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.9493
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.9325
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 2.006
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 2.5032
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.3558
+                    }
+                ],
+                "spread": 0.5707,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.1958,
+                "ranging_sharpe": 1.7173,
+                "crisis_sharpe": 0.0464,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.0464,
+                "passed": true
+            }
+        },
+        "composite_score": 83.33,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.77, decay=0.47",
+        "timestamp": "2026-03-09T21:04:39.583647"
+    },
+    {
+        "run_id": "run_Donchian_1h_2970",
+        "name": "Donchian",
+        "tf": "1h",
+        "params": {
+            "channel_lookback": 50,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_Donchian_1h_2970",
+            "total_trades": 12,
+            "win_rate": 0.4399670610389116,
+            "profit_factor": 1.2450558571514927,
+            "total_net_profit": 4601.152091657479,
+            "sharpe": 1.8795790909578347,
+            "sortino": 2.1602485096185475,
+            "calmar": -0.16759288463915256,
+            "max_dd_pct": 0.15909762074840486,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.7729,
+                        "oos_sharpe": 1.2145
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.6389,
+                        "oos_sharpe": 1.3314
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.8696,
+                        "oos_sharpe": 1.5197
+                    }
+                ],
+                "avg_wfe": 0.7605,
+                "avg_oos_sharpe": 1.3552,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.1375,
+                "base_sharpe": 1.8895,
+                "harsh_sharpe": 1.1623,
+                "harsh_pf": 0.372,
+                "stress_decay": 0.6151,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.3485,
+                    1.9291,
+                    1.2727,
+                    2.1511,
+                    2.2801
+                ],
+                "cv": 0.2241,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.6527
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 2.4187
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.775
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.6733
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.6144
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.3749
+                    }
+                ],
+                "spread": 0.8043,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.8365,
+                "ranging_sharpe": 0.9206,
+                "crisis_sharpe": 0.9179,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.9179,
+                "passed": true
+            }
+        },
+        "composite_score": 84.28,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.37, decay=0.62",
+        "timestamp": "2026-03-09T21:04:39.601454"
+    },
+    {
+        "run_id": "run_SqueezeBreakout_4h_3158",
+        "name": "SqueezeBreakout",
+        "tf": "4h",
+        "params": {
+            "bb_period": 20,
+            "kc_period": 20,
+            "trail_atr_multiplier": 3.0
+        },
+        "base_metrics": {
+            "run_id": "run_SqueezeBreakout_4h_3158",
+            "total_trades": 89,
+            "win_rate": 0.482037000512307,
+            "profit_factor": 1.1020508450255528,
+            "total_net_profit": 1289.4970141151691,
+            "sharpe": 1.860312009220602,
+            "sortino": 1.9124964278117553,
+            "calmar": 1.9212615443279688,
+            "max_dd_pct": 0.320033507081692,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.5215,
+                        "oos_sharpe": 1.1733
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 1.2868,
+                        "oos_sharpe": 2.0209
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.8252,
+                        "oos_sharpe": 1.5413
+                    }
+                ],
+                "avg_wfe": 0.8778,
+                "avg_oos_sharpe": 1.5785,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.1518,
+                "base_sharpe": 2.1258,
+                "harsh_sharpe": 1.2326,
+                "harsh_pf": 0.5872,
+                "stress_decay": 0.5798,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.8904,
+                    2.2071,
+                    1.0822,
+                    1.9148,
+                    1.5442
+                ],
+                "cv": 0.2189,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.8801
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.8225
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.9043
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.7954
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.741
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.1751
+                    }
+                ],
+                "spread": 0.4341,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.563,
+                "ranging_sharpe": 1.7496,
+                "crisis_sharpe": 0.3469,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.3469,
+                "passed": true
+            }
+        },
+        "composite_score": 85.38,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.59, decay=0.58",
+        "timestamp": "2026-03-09T21:04:39.618894"
+    },
+    {
+        "run_id": "run_Donchian_1h_8942",
+        "name": "Donchian",
+        "tf": "1h",
+        "params": {
+            "channel_lookback": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_Donchian_1h_8942",
+            "total_trades": 235,
+            "win_rate": 0.3292481053890713,
+            "profit_factor": 2.2857452460676377,
+            "total_net_profit": 32024.10911274066,
+            "sharpe": 1.8438812457695493,
+            "sortino": 0.5163984264108268,
+            "calmar": -0.6616483948389829,
+            "max_dd_pct": 0.0642968761616815,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.3375,
+                        "oos_sharpe": 0.7422
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.4511,
+                        "oos_sharpe": 0.8871
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.827,
+                        "oos_sharpe": 1.7247
+                    }
+                ],
+                "avg_wfe": 0.5385,
+                "avg_oos_sharpe": 1.118,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 2.0289,
+                "base_sharpe": 2.0013,
+                "harsh_sharpe": 1.2506,
+                "harsh_pf": 1.0376,
+                "stress_decay": 0.6249,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.8485,
+                    1.3735,
+                    1.9346,
+                    2.233,
+                    1.7005
+                ],
+                "cv": 0.1537,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.6533
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.5129
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.592
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.3876
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.4398
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.1671
+                    }
+                ],
+                "spread": 0.7795,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.1975,
+                "ranging_sharpe": 0.8699,
+                "crisis_sharpe": 0.2486,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.2486,
+                "passed": true
+            }
+        },
+        "composite_score": 81.84,
+        "promotion": "candidate_for_portfolio",
+        "reason": "Composite robustness score=81.84 \u2265 60. All 5 dimensions PASSED.",
+        "timestamp": "2026-03-09T21:04:39.636302"
+    },
+    {
+        "run_id": "run_BollReversion_5m_2611",
+        "name": "BollReversion",
+        "tf": "5m",
+        "params": {
+            "period": 20,
+            "std_devs": 2.5,
+            "hold_bars": 5
+        },
+        "base_metrics": {
+            "run_id": "run_BollReversion_5m_2611",
+            "total_trades": 24,
+            "win_rate": 0.5502466633750771,
+            "profit_factor": 1.4913039887929762,
+            "total_net_profit": 12387.939619132265,
+            "sharpe": 1.801065222037062,
+            "sortino": 0.6122104407111215,
+            "calmar": 0.023005625685490916,
+            "max_dd_pct": 0.1654288036309786,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.46,
+                        "oos_sharpe": 0.7015
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.8092,
+                        "oos_sharpe": 1.1274
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.9509,
+                        "oos_sharpe": 1.6454
+                    }
+                ],
+                "avg_wfe": 0.74,
+                "avg_oos_sharpe": 1.1581,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.9669,
+                "base_sharpe": 1.7004,
+                "harsh_sharpe": 1.1084,
+                "harsh_pf": 0.2877,
+                "stress_decay": 0.6518,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    2.2607,
+                    1.5991,
+                    1.4075,
+                    1.8924,
+                    2.0584
+                ],
+                "cv": 0.1723,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.362
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.6965
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 2.0234
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.2122
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.6804
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.9243
+                    }
+                ],
+                "spread": 0.8112,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 2.1896,
+                "ranging_sharpe": 1.1572,
+                "crisis_sharpe": 0.0391,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.0391,
+                "passed": true
+            }
+        },
+        "composite_score": 87.68,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.29, decay=0.65",
+        "timestamp": "2026-03-09T21:04:39.653589"
+    },
+    {
+        "run_id": "run_ZScoreReversion_15m_8360",
+        "name": "ZScoreReversion",
+        "tf": "15m",
+        "params": {
+            "period": 30,
+            "z_threshold": 2.0,
+            "trail_atr_multiplier": 1.5
+        },
+        "base_metrics": {
+            "run_id": "run_ZScoreReversion_15m_8360",
+            "total_trades": 46,
+            "win_rate": 0.37736698356750065,
+            "profit_factor": 1.9444165808212097,
+            "total_net_profit": 9372.328709016429,
+            "sharpe": 1.7911153224811813,
+            "sortino": 1.3566070996933846,
+            "calmar": 1.8591222950649255,
+            "max_dd_pct": 0.2749390188434061,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.7518,
+                        "oos_sharpe": 1.4357
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.4729,
+                        "oos_sharpe": 0.7423
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.7328,
+                        "oos_sharpe": 1.253
+                    }
+                ],
+                "avg_wfe": 0.6525,
+                "avg_oos_sharpe": 1.1437,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.9246,
+                "base_sharpe": 1.8345,
+                "harsh_sharpe": 0.9589,
+                "harsh_pf": 1.0962,
+                "stress_decay": 0.5227,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.1519,
+                    2.0992,
+                    1.2807,
+                    1.8859,
+                    1.7533
+                ],
+                "cv": 0.2197,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.6258
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 2.6489
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 2.1473
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.4188
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.8656
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.8165
+                    }
+                ],
+                "spread": 1.2301,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.789,
+                "ranging_sharpe": 1.1688,
+                "crisis_sharpe": -0.0539,
+                "positive_regimes": 2,
+                "worst_sharpe": -0.0539,
+                "passed": true
+            }
+        },
+        "composite_score": 74.46,
+        "promotion": "candidate_for_portfolio",
+        "reason": "Composite robustness score=74.46 \u2265 60. All 5 dimensions PASSED.",
+        "timestamp": "2026-03-09T21:04:39.670925"
+    },
+    {
+        "run_id": "run_EMAPullback_15m_3286",
+        "name": "EMAPullback",
+        "tf": "15m",
+        "params": {
+            "fast_period": 21,
+            "slow_period": 50,
+            "pullback_tolerance": 0.001,
+            "trail_atr_multiplier": 1.5
+        },
+        "base_metrics": {
+            "run_id": "run_EMAPullback_15m_3286",
+            "total_trades": 50,
+            "win_rate": 0.5773369327680674,
+            "profit_factor": 1.5752663855801707,
+            "total_net_profit": 12022.027448939116,
+            "sharpe": 1.671467478364173,
+            "sortino": 2.937839526132852,
+            "calmar": -0.8428912947317904,
+            "max_dd_pct": 0.08221964065619036,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.6564,
+                        "oos_sharpe": 1.1885
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.5703,
+                        "oos_sharpe": 0.8029
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.8068,
+                        "oos_sharpe": 1.009
+                    }
+                ],
+                "avg_wfe": 0.6778,
+                "avg_oos_sharpe": 1.0001,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.8903,
+                "base_sharpe": 1.702,
+                "harsh_sharpe": 1.1272,
+                "harsh_pf": 0.8189,
+                "stress_decay": 0.6623,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    2.1516,
+                    2.0337,
+                    1.7326,
+                    1.8476,
+                    2.6147
+                ],
+                "cv": 0.3034,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.3579
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 2.2002
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.6392
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.4092
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.5869
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.7322
+                    }
+                ],
+                "spread": 0.8423,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.5003,
+                "ranging_sharpe": 0.5671,
+                "crisis_sharpe": -0.2532,
+                "positive_regimes": 2,
+                "worst_sharpe": -0.2532,
+                "passed": true
+            }
+        },
+        "composite_score": 79.31,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.82, decay=0.66",
+        "timestamp": "2026-03-09T21:04:39.687868"
+    },
+    {
+        "run_id": "run_Donchian_15m_5547",
+        "name": "Donchian",
+        "tf": "15m",
+        "params": {
+            "channel_lookback": 50,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_Donchian_15m_5547",
+            "total_trades": 186,
+            "win_rate": 0.6477268304233724,
+            "profit_factor": 2.0841503088729136,
+            "total_net_profit": 29319.88916096364,
+            "sharpe": 1.6145944030902415,
+            "sortino": 1.942431193158832,
+            "calmar": 0.94977166439839,
+            "max_dd_pct": 0.21513474923739284,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.319,
+                        "oos_sharpe": 0.7423
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.2955,
+                        "oos_sharpe": 0.6369
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.5971,
+                        "oos_sharpe": 1.154
+                    }
+                ],
+                "avg_wfe": 0.4039,
+                "avg_oos_sharpe": 0.8444,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.6974,
+                "base_sharpe": 1.3094,
+                "harsh_sharpe": 1.0033,
+                "harsh_pf": 0.8198,
+                "stress_decay": 0.7662,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.2842,
+                    1.5392,
+                    1.5622,
+                    1.976,
+                    1.3486
+                ],
+                "cv": 0.1564,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.6069
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.8962
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 2.0904
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.5484
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 2.1461
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.7808
+                    }
+                ],
+                "spread": 0.5977,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.721,
+                "ranging_sharpe": 1.1619,
+                "crisis_sharpe": 0.6818,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.6818,
+                "passed": true
+            }
+        },
+        "composite_score": 78.33,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.82, decay=0.77",
+        "timestamp": "2026-03-09T21:04:39.710790"
+    },
+    {
+        "run_id": "run_ZScoreReversion_15m_9385",
+        "name": "ZScoreReversion",
+        "tf": "15m",
+        "params": {
+            "period": 30,
+            "z_threshold": 2.5,
+            "trail_atr_multiplier": 1.5
+        },
+        "base_metrics": {
+            "run_id": "run_ZScoreReversion_15m_9385",
+            "total_trades": 205,
+            "win_rate": 0.6420415652923007,
+            "profit_factor": 1.722514915469739,
+            "total_net_profit": 21346.79841341561,
+            "sharpe": 1.555190968218385,
+            "sortino": 0.7398872351785091,
+            "calmar": -0.14016627657563374,
+            "max_dd_pct": 0.0722635746902645,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.6289,
+                        "oos_sharpe": 1.1204
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.2815,
+                        "oos_sharpe": 0.5229
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.943,
+                        "oos_sharpe": 1.1085
+                    }
+                ],
+                "avg_wfe": 0.6178,
+                "avg_oos_sharpe": 0.9173,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.7025,
+                "base_sharpe": 1.4136,
+                "harsh_sharpe": 0.7215,
+                "harsh_pf": 0.8258,
+                "stress_decay": 0.5104,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.685,
+                    2.0135,
+                    2.2075,
+                    1.3971,
+                    1.492
+                ],
+                "cv": 0.2374,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.6709
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.8104
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.7828
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.6613
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.3029
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.5821
+                    }
+                ],
+                "spread": 0.5075,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.8584,
+                "ranging_sharpe": 0.7077,
+                "crisis_sharpe": 0.8754,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.7077,
+                "passed": true
+            }
+        },
+        "composite_score": 79.4,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.83, decay=0.51",
+        "timestamp": "2026-03-09T21:04:39.728341"
+    },
+    {
+        "run_id": "run_ATRBreakout_15m_3195",
+        "name": "ATRBreakout",
+        "tf": "15m",
+        "params": {
+            "baseline_period": 20,
+            "atr_threshold": 2.0,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_ATRBreakout_15m_3195",
+            "total_trades": 458,
+            "win_rate": 0.6274514541609549,
+            "profit_factor": 1.3481488115335396,
+            "total_net_profit": 4724.308538892694,
+            "sharpe": 1.521850351495595,
+            "sortino": 2.3002682489505824,
+            "calmar": 1.6789604647818828,
+            "max_dd_pct": 0.15092293759152528,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.4264,
+                        "oos_sharpe": 0.4938
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.6627,
+                        "oos_sharpe": 1.0445
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.3951,
+                        "oos_sharpe": 0.6593
+                    }
+                ],
+                "avg_wfe": 0.4947,
+                "avg_oos_sharpe": 0.7325,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.6338,
+                "base_sharpe": 1.339,
+                "harsh_sharpe": 1.0618,
+                "harsh_pf": 0.3149,
+                "stress_decay": 0.793,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    0.9858,
+                    1.6126,
+                    1.1233,
+                    0.9681,
+                    1.5793
+                ],
+                "cv": 0.2569,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.1124
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.6781
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.4691
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.984
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 0.99
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 2.0723
+                    }
+                ],
+                "spread": 1.0823,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.745,
+                "ranging_sharpe": 0.5802,
+                "crisis_sharpe": 0.249,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.249,
+                "passed": true
+            }
+        },
+        "composite_score": 75.49,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.31, decay=0.79",
+        "timestamp": "2026-03-09T21:04:39.746773"
+    },
+    {
+        "run_id": "run_BollReversion_1h_2474",
+        "name": "BollReversion",
+        "tf": "1h",
+        "params": {
+            "period": 20,
+            "std_devs": 2.5,
+            "hold_bars": 5
+        },
+        "base_metrics": {
+            "run_id": "run_BollReversion_1h_2474",
+            "total_trades": 407,
+            "win_rate": 0.35449211409139464,
+            "profit_factor": 2.4676065677114747,
+            "total_net_profit": 21193.686062164812,
+            "sharpe": 1.517302890353899,
+            "sortino": -0.33262489519578764,
+            "calmar": 0.43886716887226873,
+            "max_dd_pct": 0.10887361021266856,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.538,
+                        "oos_sharpe": 0.8004
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.3105,
+                        "oos_sharpe": 0.3902
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.6876,
+                        "oos_sharpe": 0.673
+                    }
+                ],
+                "avg_wfe": 0.512,
+                "avg_oos_sharpe": 0.6212,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.7675,
+                "base_sharpe": 1.4302,
+                "harsh_sharpe": 0.4405,
+                "harsh_pf": 1.4325,
+                "stress_decay": 0.308,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    0.9873,
+                    1.5287,
+                    1.8984,
+                    1.8173,
+                    1.6734
+                ],
+                "cv": 0.2167,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.4722
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.8045
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.139
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.8685
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.3388
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.419
+                    }
+                ],
+                "spread": 0.7295,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.5756,
+                "ranging_sharpe": 0.7749,
+                "crisis_sharpe": -0.0286,
+                "positive_regimes": 2,
+                "worst_sharpe": -0.0286,
+                "passed": true
+            }
+        },
+        "composite_score": 63.21,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=1.43, decay=0.31",
+        "timestamp": "2026-03-09T21:04:39.765540"
+    },
+    {
+        "run_id": "run_BollReversion_5m_8427",
+        "name": "BollReversion",
+        "tf": "5m",
+        "params": {
+            "period": 20,
+            "std_devs": 2.0,
+            "hold_bars": 5
+        },
+        "base_metrics": {
+            "run_id": "run_BollReversion_5m_8427",
+            "total_trades": 22,
+            "win_rate": 0.5923498070290178,
+            "profit_factor": 2.101669541020293,
+            "total_net_profit": 20583.41437655097,
+            "sharpe": 1.5145994216438696,
+            "sortino": 2.501509196747625,
+            "calmar": 0.44575753073624513,
+            "max_dd_pct": 0.2770411421667401,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.5888,
+                        "oos_sharpe": 0.6906
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.2974,
+                        "oos_sharpe": 0.4767
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.6933,
+                        "oos_sharpe": 1.1626
+                    }
+                ],
+                "avg_wfe": 0.5265,
+                "avg_oos_sharpe": 0.7766,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.6752,
+                "base_sharpe": 1.3943,
+                "harsh_sharpe": 0.9516,
+                "harsh_pf": 1.1016,
+                "stress_decay": 0.6825,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.8973,
+                    1.3508,
+                    1.172,
+                    2.3465,
+                    1.7267
+                ],
+                "cv": 0.2993,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 0.9388
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.8918
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.6138
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.4593
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.0703
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.8986
+                    }
+                ],
+                "spread": 0.9598,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.8352,
+                "ranging_sharpe": 0.9202,
+                "crisis_sharpe": 0.2027,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.2027,
+                "passed": true
+            }
+        },
+        "composite_score": 75.96,
+        "promotion": "candidate_for_portfolio",
+        "reason": "Composite robustness score=75.96 \u2265 60. All 5 dimensions PASSED.",
+        "timestamp": "2026-03-09T21:04:39.783207"
+    },
+    {
+        "run_id": "run_ATRBreakout_5m_4002",
+        "name": "ATRBreakout",
+        "tf": "5m",
+        "params": {
+            "baseline_period": 20,
+            "atr_threshold": 2.0,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_ATRBreakout_5m_4002",
+            "total_trades": 104,
+            "win_rate": 0.4814867581074741,
+            "profit_factor": 2.0160813710508823,
+            "total_net_profit": 29178.282876245878,
+            "sharpe": 1.395694240614719,
+            "sortino": 1.5108345703545543,
+            "calmar": 1.2694358205955298,
+            "max_dd_pct": 0.3989262498980762,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.5275,
+                        "oos_sharpe": 0.8141
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.7648,
+                        "oos_sharpe": 0.9837
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.9608,
+                        "oos_sharpe": 0.98
+                    }
+                ],
+                "avg_wfe": 0.751,
+                "avg_oos_sharpe": 0.9259,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.6242,
+                "base_sharpe": 1.2909,
+                "harsh_sharpe": 1.0566,
+                "harsh_pf": 0.8624,
+                "stress_decay": 0.8185,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.5863,
+                    1.4947,
+                    1.2927,
+                    1.302,
+                    1.0573
+                ],
+                "cv": 0.136,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.3022
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.8397
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.3071
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.307
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.4908
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.6846
+                    }
+                ],
+                "spread": 0.5375,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.3326,
+                "ranging_sharpe": 1.022,
+                "crisis_sharpe": 0.5707,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.5707,
+                "passed": true
+            }
+        },
+        "composite_score": 91.33,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.86, decay=0.82",
+        "timestamp": "2026-03-09T21:04:39.801634"
+    },
+    {
+        "run_id": "run_Donchian_4h_2698",
+        "name": "Donchian",
+        "tf": "4h",
+        "params": {
+            "channel_lookback": 50,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_Donchian_4h_2698",
+            "total_trades": 74,
+            "win_rate": 0.44434138792530636,
+            "profit_factor": 1.4052956126038059,
+            "total_net_profit": 9215.262198100103,
+            "sharpe": 1.3566026081028246,
+            "sortino": 1.237156129353464,
+            "calmar": 1.4235787633508568,
+            "max_dd_pct": 0.3156931975742504,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.3909,
+                        "oos_sharpe": 0.532
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.9101,
+                        "oos_sharpe": 0.8723
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 1.0008,
+                        "oos_sharpe": 1.4011
+                    }
+                ],
+                "avg_wfe": 0.7673,
+                "avg_oos_sharpe": 0.9351,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.5172,
+                "base_sharpe": 1.6393,
+                "harsh_sharpe": 0.8983,
+                "harsh_pf": 1.137,
+                "stress_decay": 0.5479,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.8366,
+                    1.898,
+                    1.2773,
+                    0.7709,
+                    1.5595
+                ],
+                "cv": 0.3152,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 2.0978
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.9955
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.1719
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.142
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.3428
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.1527
+                    }
+                ],
+                "spread": 0.9558,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.6997,
+                "ranging_sharpe": 0.2613,
+                "crisis_sharpe": 1.5056,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.2613,
+                "passed": true
+            }
+        },
+        "composite_score": 77.2,
+        "promotion": "candidate_for_portfolio",
+        "reason": "Composite robustness score=77.2 \u2265 60. All 5 dimensions PASSED.",
+        "timestamp": "2026-03-09T21:04:39.821082"
+    },
+    {
+        "run_id": "run_EMAPullback_4h_9868",
+        "name": "EMAPullback",
+        "tf": "4h",
+        "params": {
+            "fast_period": 21,
+            "slow_period": 50,
+            "pullback_tolerance": 0.0005,
+            "trail_atr_multiplier": 1.5
+        },
+        "base_metrics": {
+            "run_id": "run_EMAPullback_4h_9868",
+            "total_trades": 381,
+            "win_rate": 0.648451983637615,
+            "profit_factor": 2.166213771098314,
+            "total_net_profit": 11963.076431350239,
+            "sharpe": 1.2343722517192375,
+            "sortino": 0.9358238213064936,
+            "calmar": 1.4041639403682833,
+            "max_dd_pct": 0.22156683184993325,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.7101,
+                        "oos_sharpe": 1.0364
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.0117,
+                        "oos_sharpe": 0.0198
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.8397,
+                        "oos_sharpe": 1.0062
+                    }
+                ],
+                "avg_wfe": 0.5205,
+                "avg_oos_sharpe": 0.6875,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.4338,
+                "base_sharpe": 1.4083,
+                "harsh_sharpe": 0.9038,
+                "harsh_pf": 1.1803,
+                "stress_decay": 0.6417,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    0.8132,
+                    1.7209,
+                    0.9249,
+                    1.3042,
+                    1.3097
+                ],
+                "cv": 0.2614,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.2241
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 1.4996
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.0886
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.5387
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.1065
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.7139
+                    }
+                ],
+                "spread": 0.6253,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.1127,
+                "ranging_sharpe": 0.5892,
+                "crisis_sharpe": 0.1355,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.1355,
+                "passed": true
+            }
+        },
+        "composite_score": 78.28,
+        "promotion": "candidate_for_portfolio",
+        "reason": "Composite robustness score=78.28 \u2265 60. All 5 dimensions PASSED.",
+        "timestamp": "2026-03-09T21:04:39.839514"
+    },
+    {
+        "run_id": "run_MACross_1h_4773",
+        "name": "MACross",
+        "tf": "1h",
+        "params": {
+            "fast_period": 20,
+            "slow_period": 50,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_MACross_1h_4773",
+            "total_trades": 417,
+            "win_rate": 0.6793752095713941,
+            "profit_factor": 1.013033734579576,
+            "total_net_profit": 190.41255733309495,
+            "sharpe": 1.192412583449392,
+            "sortino": 0.4043862978677235,
+            "calmar": 1.263311962629933,
+            "max_dd_pct": 0.386929145882315,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.8228,
+                        "oos_sharpe": 1.1336
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.6304,
+                        "oos_sharpe": 0.5009
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 1.2128,
+                        "oos_sharpe": 1.5511
+                    }
+                ],
+                "avg_wfe": 0.8887,
+                "avg_oos_sharpe": 1.0619,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.3271,
+                "base_sharpe": 1.385,
+                "harsh_sharpe": 0.9313,
+                "harsh_pf": 0.4845,
+                "stress_decay": 0.6724,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.3578,
+                    1.6372,
+                    1.9135,
+                    1.2474,
+                    1.3882
+                ],
+                "cv": 0.3326,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.1659
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 0.9839
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 0.9293
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 0.9444
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 1.1797
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.8167
+                    }
+                ],
+                "spread": 0.8874,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.2986,
+                "ranging_sharpe": 0.7793,
+                "crisis_sharpe": -0.1297,
+                "positive_regimes": 2,
+                "worst_sharpe": -0.1297,
+                "passed": true
+            }
+        },
+        "composite_score": 78.04,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.48, decay=0.67",
+        "timestamp": "2026-03-09T21:04:39.858933"
+    },
+    {
+        "run_id": "run_SqueezeBreakout_4h_3878",
+        "name": "SqueezeBreakout",
+        "tf": "4h",
+        "params": {
+            "bb_period": 20,
+            "kc_period": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_SqueezeBreakout_4h_3878",
+            "total_trades": 296,
+            "win_rate": 0.3668616469184736,
+            "profit_factor": 1.5227580126977278,
+            "total_net_profit": 4153.251588786219,
+            "sharpe": 1.1608438559297256,
+            "sortino": 2.2791251395385643,
+            "calmar": 0.6425247443741391,
+            "max_dd_pct": 0.07430848208295979,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 1.7641,
+                        "oos_sharpe": 1.7967
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.5851,
+                        "oos_sharpe": 0.9799
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 2.1305,
+                        "oos_sharpe": 1.4544
+                    }
+                ],
+                "avg_wfe": 1.4932,
+                "avg_oos_sharpe": 1.4103,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.1242,
+                "base_sharpe": 1.2634,
+                "harsh_sharpe": 0.7002,
+                "harsh_pf": 1.1635,
+                "stress_decay": 0.5543,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.7993,
+                    0.9734,
+                    1.1226,
+                    0.6887,
+                    1.2116
+                ],
+                "cv": 0.3153,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.563
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 0.8206
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.6003
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.3012
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 0.9582
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.1289
+                    }
+                ],
+                "spread": 0.7797,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.5055,
+                "ranging_sharpe": 0.7086,
+                "crisis_sharpe": 1.2082,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.7086,
+                "passed": true
+            }
+        },
+        "composite_score": 78.5,
+        "promotion": "candidate_for_portfolio",
+        "reason": "Composite robustness score=78.5 \u2265 60. All 5 dimensions PASSED.",
+        "timestamp": "2026-03-09T21:04:39.877792"
+    },
+    {
+        "run_id": "run_MACross_4h_7143",
+        "name": "MACross",
+        "tf": "4h",
+        "params": {
+            "fast_period": 20,
+            "slow_period": 50,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_MACross_4h_7143",
+            "total_trades": 459,
+            "win_rate": 0.5953868802967328,
+            "profit_factor": 1.473173156767909,
+            "total_net_profit": 11728.24684741161,
+            "sharpe": 1.1180693968992879,
+            "sortino": 1.1679300340952612,
+            "calmar": 1.655946212167085,
+            "max_dd_pct": 0.2949501267765158,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.2168,
+                        "oos_sharpe": 0.2237
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.121,
+                        "oos_sharpe": 0.2218
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.5405,
+                        "oos_sharpe": 0.7837
+                    }
+                ],
+                "avg_wfe": 0.2928,
+                "avg_oos_sharpe": 0.4097,
+                "passed": false
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.4621,
+                "base_sharpe": 0.9582,
+                "harsh_sharpe": 0.7085,
+                "harsh_pf": 0.7893,
+                "stress_decay": 0.7394,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.1348,
+                    0.9686,
+                    1.5782,
+                    0.9759,
+                    1.7346
+                ],
+                "cv": 0.3187,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.3138
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 0.7294
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 0.9414
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 1.0657
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 0.6255
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.8905
+                    }
+                ],
+                "spread": 1.265,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.244,
+                "ranging_sharpe": 0.1593,
+                "crisis_sharpe": 1.3247,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.1593,
+                "passed": true
+            }
+        },
+        "composite_score": 62.84,
+        "promotion": "rejected",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "timestamp": "2026-03-09T21:04:39.897481"
+    },
+    {
+        "run_id": "run_VwapReversion_1h_2941",
+        "name": "VwapReversion",
+        "tf": "1h",
+        "params": {
+            "return_threshold_pct": 0.005,
+            "hold_bars": 24
+        },
+        "base_metrics": {
+            "run_id": "run_VwapReversion_1h_2941",
+            "total_trades": 179,
+            "win_rate": 0.6051760327274696,
+            "profit_factor": 1.0988316221759364,
+            "total_net_profit": 891.6819932796128,
+            "sharpe": 1.0892671796151716,
+            "sortino": 2.7973923069504987,
+            "calmar": 1.573839257905786,
+            "max_dd_pct": 0.19184461743180997,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 2.6997,
+                        "oos_sharpe": 1.0752
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.0923,
+                        "oos_sharpe": 0.1226
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": -0.1427,
+                        "oos_sharpe": -0.1849
+                    }
+                ],
+                "avg_wfe": 0.8831,
+                "avg_oos_sharpe": 0.3376,
+                "passed": false
+            },
+            "cost_stress": {
+                "opt_sharpe": 1.1087,
+                "base_sharpe": 1.0506,
+                "harsh_sharpe": 0.5714,
+                "harsh_pf": 0.9724,
+                "stress_decay": 0.5439,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    0.8247,
+                    1.4227,
+                    0.8292,
+                    0.5701,
+                    0.5201
+                ],
+                "cv": 0.3768,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 1.2547
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 0.8287
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.1092
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 0.8752
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 0.8935
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.2949
+                    }
+                ],
+                "spread": 0.4662,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 0.9212,
+                "ranging_sharpe": 0.1185,
+                "crisis_sharpe": -0.9228,
+                "positive_regimes": 2,
+                "worst_sharpe": -0.9228,
+                "passed": false
+            }
+        },
+        "composite_score": 74.19,
+        "promotion": "rejected",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "timestamp": "2026-03-09T21:04:39.916216"
+    },
+    {
+        "run_id": "run_Donchian_1h_1035",
+        "name": "Donchian",
+        "tf": "1h",
+        "params": {
+            "channel_lookback": 20,
+            "trail_atr_multiplier": 3.0
+        },
+        "base_metrics": {
+            "run_id": "run_Donchian_1h_1035",
+            "total_trades": 299,
+            "win_rate": 0.5639499468600777,
+            "profit_factor": 1.1530395506404383,
+            "total_net_profit": 1057.2208178595513,
+            "sharpe": 0.8575841515702443,
+            "sortino": 1.9317340599120918,
+            "calmar": 0.3870734845198087,
+            "max_dd_pct": 0.16949519070299718,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 1.3426,
+                        "oos_sharpe": 0.5206
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 1.3733,
+                        "oos_sharpe": 0.9168
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.2136,
+                        "oos_sharpe": 0.1574
+                    }
+                ],
+                "avg_wfe": 0.9765,
+                "avg_oos_sharpe": 0.5316,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 0.8237,
+                "base_sharpe": 0.9822,
+                "harsh_sharpe": 0.4052,
+                "harsh_pf": 0.5349,
+                "stress_decay": 0.4125,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    0.4146,
+                    0.8968,
+                    0.8556,
+                    0.4376,
+                    1.4057
+                ],
+                "cv": 0.4283,
+                "passed": false
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 0.9149
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 0.7453
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 1.1707
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 0.8399
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 0.6279
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.0636
+                    }
+                ],
+                "spread": 0.5428,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 1.053,
+                "ranging_sharpe": -0.3704,
+                "crisis_sharpe": 0.807,
+                "positive_regimes": 2,
+                "worst_sharpe": -0.3704,
+                "passed": true
+            }
+        },
+        "composite_score": 66.75,
+        "promotion": "rejected",
+        "reason": "Failed cost stress: harsh PF=0.53, decay=0.41",
+        "timestamp": "2026-03-09T21:04:39.934200"
+    },
+    {
+        "run_id": "run_Donchian_4h_3581",
+        "name": "Donchian",
+        "tf": "4h",
+        "params": {
+            "channel_lookback": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_Donchian_4h_3581",
+            "total_trades": 403,
+            "win_rate": 0.6698331533360341,
+            "profit_factor": 1.8645510740321676,
+            "total_net_profit": 25783.468264618452,
+            "sharpe": 0.6748529504093832,
+            "sortino": 0.034971804703153975,
+            "calmar": 1.827360295839767,
+            "max_dd_pct": 0.18151173000011733,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": -8.7188,
+                        "oos_sharpe": 0.3996
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": -0.6455,
+                        "oos_sharpe": -0.622
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.3382,
+                        "oos_sharpe": 0.3534
+                    }
+                ],
+                "avg_wfe": -3.0087,
+                "avg_oos_sharpe": 0.0437,
+                "passed": false
+            },
+            "cost_stress": {
+                "opt_sharpe": 0.6372,
+                "base_sharpe": 0.6969,
+                "harsh_sharpe": 0.3233,
+                "harsh_pf": 0.9747,
+                "stress_decay": 0.4639,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    0.8248,
+                    0.6313,
+                    0.386,
+                    1.2626,
+                    0.4718
+                ],
+                "cv": 0.466,
+                "passed": false
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 0.544
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 0.997
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 0.6802
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 0.3784
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 0.7708
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.1063
+                    }
+                ],
+                "spread": 0.7279,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 0.68,
+                "ranging_sharpe": 0.9112,
+                "crisis_sharpe": 0.308,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.308,
+                "passed": true
+            }
+        },
+        "composite_score": -96.0,
+        "promotion": "rejected",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "timestamp": "2026-03-09T21:04:39.954167"
+    },
+    {
+        "run_id": "run_SqueezeBreakout_5m_5587",
+        "name": "SqueezeBreakout",
+        "tf": "5m",
+        "params": {
+            "bb_period": 20,
+            "kc_period": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "base_metrics": {
+            "run_id": "run_SqueezeBreakout_5m_5587",
+            "total_trades": 464,
+            "win_rate": 0.5936379839964764,
+            "profit_factor": 2.355396646282886,
+            "total_net_profit": 32915.06728518907,
+            "sharpe": 0.6718643766102468,
+            "sortino": 2.488212135469371,
+            "calmar": -0.3510311964062608,
+            "max_dd_pct": 0.07846892556815994,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.4735,
+                        "oos_sharpe": 0.3911
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": 0.9873,
+                        "oos_sharpe": 0.6558
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 2.6304,
+                        "oos_sharpe": 1.1701
+                    }
+                ],
+                "avg_wfe": 1.3637,
+                "avg_oos_sharpe": 0.739,
+                "passed": true
+            },
+            "cost_stress": {
+                "opt_sharpe": 0.789,
+                "base_sharpe": 0.689,
+                "harsh_sharpe": 0.5008,
+                "harsh_pf": 1.1441,
+                "stress_decay": 0.7268,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    0.7545,
+                    0.6512,
+                    0.5355,
+                    0.4472,
+                    0.7137
+                ],
+                "cv": 0.186,
+                "passed": true
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 0.6851
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 0.2591
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 0.5643
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 0.7443
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 0.7258
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 0.9317
+                    }
+                ],
+                "spread": 0.6726,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 0.731,
+                "ranging_sharpe": -0.4942,
+                "crisis_sharpe": 0.0581,
+                "positive_regimes": 2,
+                "worst_sharpe": -0.4942,
+                "passed": true
+            }
+        },
+        "composite_score": 85.19,
+        "promotion": "candidate_for_portfolio",
+        "reason": "Composite robustness score=85.19 \u2265 60. All 5 dimensions PASSED.",
+        "timestamp": "2026-03-09T21:04:39.972252"
+    },
+    {
+        "run_id": "run_BollReversion_15m_6811",
+        "name": "BollReversion",
+        "tf": "15m",
+        "params": {
+            "period": 20,
+            "std_devs": 2.5,
+            "hold_bars": 5
+        },
+        "base_metrics": {
+            "run_id": "run_BollReversion_15m_6811",
+            "total_trades": 29,
+            "win_rate": 0.35480600376073274,
+            "profit_factor": 1.9296914677895591,
+            "total_net_profit": 8561.923697139657,
+            "sharpe": 0.6460329346988691,
+            "sortino": -0.21165418132994973,
+            "calmar": 0.5366879598806265,
+            "max_dd_pct": 0.3466646464158006,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 0.101,
+                        "oos_sharpe": 0.1067
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": -0.0991,
+                        "oos_sharpe": -0.0708
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.0855,
+                        "oos_sharpe": 0.0546
+                    }
+                ],
+                "avg_wfe": 0.0291,
+                "avg_oos_sharpe": 0.0302,
+                "passed": false
+            },
+            "cost_stress": {
+                "opt_sharpe": 0.5699,
+                "base_sharpe": 0.7187,
+                "harsh_sharpe": 0.5078,
+                "harsh_pf": 1.3037,
+                "stress_decay": 0.7065,
+                "passed": true
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    0.9193,
+                    0.2951,
+                    1.385,
+                    0.7328,
+                    0.563
+                ],
+                "cv": 0.6028,
+                "passed": false
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 0.7231
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 0.6394
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 0.6639
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 0.3499
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": -0.1347
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 0.9594
+                    }
+                ],
+                "spread": 1.0941,
+                "passed": false
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 0.7705,
+                "ranging_sharpe": 0.4146,
+                "crisis_sharpe": 0.0342,
+                "positive_regimes": 3,
+                "worst_sharpe": 0.0342,
+                "passed": true
+            }
+        },
+        "composite_score": 44.74,
+        "promotion": "rejected",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "timestamp": "2026-03-09T21:04:39.991435"
+    },
+    {
+        "run_id": "run_EMAPullback_5m_3742",
+        "name": "EMAPullback",
+        "tf": "5m",
+        "params": {
+            "fast_period": 21,
+            "slow_period": 50,
+            "pullback_tolerance": 0.001,
+            "trail_atr_multiplier": 1.5
+        },
+        "base_metrics": {
+            "run_id": "run_EMAPullback_5m_3742",
+            "total_trades": 307,
+            "win_rate": 0.4813235418729832,
+            "profit_factor": 1.2276831818949248,
+            "total_net_profit": 4902.75816199882,
+            "sharpe": 0.6007609335737589,
+            "sortino": 1.3014182601968585,
+            "calmar": 1.6680971711976884,
+            "max_dd_pct": 0.1436586443932202,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 1.0531,
+                        "oos_sharpe": 0.4319
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": -0.0083,
+                        "oos_sharpe": -0.0051
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 0.7444,
+                        "oos_sharpe": 0.5805
+                    }
+                ],
+                "avg_wfe": 0.5964,
+                "avg_oos_sharpe": 0.3358,
+                "passed": false
+            },
+            "cost_stress": {
+                "opt_sharpe": 0.7281,
+                "base_sharpe": 0.4776,
+                "harsh_sharpe": 0.6064,
+                "harsh_pf": 0.5588,
+                "stress_decay": 1.2697,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    0.7812,
+                    0.8488,
+                    1.4862,
+                    0.9679,
+                    0.3801
+                ],
+                "cv": 0.767,
+                "passed": false
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 0.6574
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 0.486
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 0.8118
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 0.3347
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 0.964
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 1.0169
+                    }
+                ],
+                "spread": 0.6822,
+                "passed": true
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 0.3867,
+                "ranging_sharpe": 0.8717,
+                "crisis_sharpe": -0.6033,
+                "positive_regimes": 2,
+                "worst_sharpe": -0.6033,
+                "passed": false
+            }
+        },
+        "composite_score": 69.41,
+        "promotion": "rejected",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "timestamp": "2026-03-09T21:04:40.009567"
+    },
+    {
+        "run_id": "run_ZScoreReversion_1h_8170",
+        "name": "ZScoreReversion",
+        "tf": "1h",
+        "params": {
+            "period": 30,
+            "z_threshold": 2.0,
+            "trail_atr_multiplier": 1.5
+        },
+        "base_metrics": {
+            "run_id": "run_ZScoreReversion_1h_8170",
+            "total_trades": 53,
+            "win_rate": 0.474226402127814,
+            "profit_factor": 1.743014309046743,
+            "total_net_profit": 18112.590897990976,
+            "sharpe": 0.5639909440891442,
+            "sortino": -0.044126139482635385,
+            "calmar": 0.8728163426529278,
+            "max_dd_pct": 0.3799636803206417,
+            "status": "COMPLETED"
+        },
+        "robustness_tests": {
+            "walkforward": {
+                "folds": [
+                    {
+                        "fold": 0,
+                        "wfe": 1.1725,
+                        "oos_sharpe": 0.5353
+                    },
+                    {
+                        "fold": 1,
+                        "wfe": -0.1009,
+                        "oos_sharpe": -0.0593
+                    },
+                    {
+                        "fold": 2,
+                        "wfe": 1.3836,
+                        "oos_sharpe": 0.4933
+                    }
+                ],
+                "avg_wfe": 0.8184,
+                "avg_oos_sharpe": 0.3231,
+                "passed": false
+            },
+            "cost_stress": {
+                "opt_sharpe": 0.4876,
+                "base_sharpe": 0.6323,
+                "harsh_sharpe": 0.6242,
+                "harsh_pf": 0.9131,
+                "stress_decay": 0.9873,
+                "passed": false
+            },
+            "param_neighborhood": {
+                "perturbation_sharpes": [
+                    1.1042,
+                    0.2935,
+                    0.481,
+                    0.5628,
+                    0.5072
+                ],
+                "cv": 0.4856,
+                "passed": false
+            },
+            "startdate_sensitivity": {
+                "runs": [
+                    {
+                        "offset_days": -90,
+                        "sharpe": 0.7038
+                    },
+                    {
+                        "offset_days": -60,
+                        "sharpe": 0.4798
+                    },
+                    {
+                        "offset_days": -30,
+                        "sharpe": 0.5825
+                    },
+                    {
+                        "offset_days": 30,
+                        "sharpe": 0.0046
+                    },
+                    {
+                        "offset_days": 60,
+                        "sharpe": 0.4691
+                    },
+                    {
+                        "offset_days": 90,
+                        "sharpe": 0.6368
+                    }
+                ],
+                "spread": 0.6992,
+                "passed": false
+            },
+            "regime_segmentation": {
+                "trending_sharpe": 0.7755,
+                "ranging_sharpe": -0.8032,
+                "crisis_sharpe": -1.0236,
+                "positive_regimes": 1,
+                "worst_sharpe": -1.0236,
+                "passed": false
+            }
+        },
+        "composite_score": 69.71,
+        "promotion": "rejected",
+        "reason": "Walk-forward OOS Sharpe collapsed (WFE < 40%)",
+        "timestamp": "2026-03-09T21:04:40.029306"
+    }
+]

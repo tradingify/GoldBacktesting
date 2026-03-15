@@ -1,0 +1,687 @@
+[
+    {
+        "name": "EMAPullback",
+        "tf": "15m",
+        "params": {
+            "fast_period": 21,
+            "slow_period": 50,
+            "pullback_tolerance": 0.0005,
+            "trail_atr_multiplier": 1.5
+        },
+        "metrics": {
+            "run_id": "run_EMAPullback_15m_7133",
+            "total_trades": 174,
+            "win_rate": 0.583565750140808,
+            "profit_factor": 1.8914950115614637,
+            "total_net_profit": 11747.160411889854,
+            "sharpe": 2.4290845512816377,
+            "sortino": -0.08978414969753967,
+            "calmar": 1.8447605620372562,
+            "max_dd_pct": 0.2301193734445362,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "SqueezeBreakout",
+        "tf": "1h",
+        "params": {
+            "bb_period": 20,
+            "kc_period": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_SqueezeBreakout_1h_5594",
+            "total_trades": 42,
+            "win_rate": 0.5533571467036075,
+            "profit_factor": 1.0483964075787418,
+            "total_net_profit": 1075.1293132973615,
+            "sharpe": 2.42523988396819,
+            "sortino": 2.391472456977458,
+            "calmar": 0.1263962586074756,
+            "max_dd_pct": 0.25698454934909387,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "VwapReversion",
+        "tf": "15m",
+        "params": {
+            "return_threshold_pct": 0.005,
+            "hold_bars": 24
+        },
+        "metrics": {
+            "run_id": "run_VwapReversion_15m_5848",
+            "total_trades": 357,
+            "win_rate": 0.3153931044666414,
+            "profit_factor": 1.1431102528799786,
+            "total_net_profit": 1687.5549077092805,
+            "sharpe": 2.277357757629583,
+            "sortino": 1.9171195729780797,
+            "calmar": 1.593436938710588,
+            "max_dd_pct": 0.39305845285676644,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "VwapReversion",
+        "tf": "5m",
+        "params": {
+            "return_threshold_pct": 0.005,
+            "hold_bars": 24
+        },
+        "metrics": {
+            "run_id": "run_VwapReversion_5m_5984",
+            "total_trades": 444,
+            "win_rate": 0.5556998626373446,
+            "profit_factor": 1.0193114385511273,
+            "total_net_profit": 403.7030299304075,
+            "sharpe": 2.265031887471884,
+            "sortino": -0.2830717484147454,
+            "calmar": 0.1777043445467541,
+            "max_dd_pct": 0.0960253475506214,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "BollReversion",
+        "tf": "15m",
+        "params": {
+            "period": 20,
+            "std_devs": 2.0,
+            "hold_bars": 5
+        },
+        "metrics": {
+            "run_id": "run_BollReversion_15m_2493",
+            "total_trades": 342,
+            "win_rate": 0.5295700732364357,
+            "profit_factor": 2.2460205704553986,
+            "total_net_profit": 25249.156678373136,
+            "sharpe": 2.148157145072554,
+            "sortino": 1.2974900965268548,
+            "calmar": -0.3949216796097774,
+            "max_dd_pct": 0.051383534388393375,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "VwapReversion",
+        "tf": "15m",
+        "params": {
+            "return_threshold_pct": 0.005,
+            "hold_bars": 12
+        },
+        "metrics": {
+            "run_id": "run_VwapReversion_15m_1092",
+            "total_trades": 475,
+            "win_rate": 0.49331808128095644,
+            "profit_factor": 1.154352113390476,
+            "total_net_profit": 1963.0361593206949,
+            "sharpe": 2.1356961144792965,
+            "sortino": 2.396824736121709,
+            "calmar": -0.6356423303947146,
+            "max_dd_pct": 0.12911165094154742,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "Donchian",
+        "tf": "5m",
+        "params": {
+            "channel_lookback": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_Donchian_5m_4244",
+            "total_trades": 374,
+            "win_rate": 0.4042652889497158,
+            "profit_factor": 2.1641559263428505,
+            "total_net_profit": 30028.674696569742,
+            "sharpe": 2.129007977648747,
+            "sortino": 0.0945856786483652,
+            "calmar": 1.5984758775118681,
+            "max_dd_pct": 0.26570056427511995,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "SqueezeBreakout",
+        "tf": "15m",
+        "params": {
+            "bb_period": 20,
+            "kc_period": 20,
+            "trail_atr_multiplier": 3.0
+        },
+        "metrics": {
+            "run_id": "run_SqueezeBreakout_15m_2908",
+            "total_trades": 195,
+            "win_rate": 0.3168188131163271,
+            "profit_factor": 2.2421091251322993,
+            "total_net_profit": 22245.356798491805,
+            "sharpe": 1.9518665554865677,
+            "sortino": 2.0664379526448933,
+            "calmar": -0.10364745244395035,
+            "max_dd_pct": 0.25210018361352615,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "Donchian",
+        "tf": "15m",
+        "params": {
+            "channel_lookback": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_Donchian_15m_9873",
+            "total_trades": 138,
+            "win_rate": 0.51004542988302,
+            "profit_factor": 1.1872330517881364,
+            "total_net_profit": 1370.7556044056373,
+            "sharpe": 1.9351329262064239,
+            "sortino": -0.47383148365945954,
+            "calmar": -0.3673949123444349,
+            "max_dd_pct": 0.1950007035565834,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "Donchian",
+        "tf": "1h",
+        "params": {
+            "channel_lookback": 50,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_Donchian_1h_2970",
+            "total_trades": 12,
+            "win_rate": 0.4399670610389116,
+            "profit_factor": 1.2450558571514927,
+            "total_net_profit": 4601.152091657479,
+            "sharpe": 1.8795790909578347,
+            "sortino": 2.1602485096185475,
+            "calmar": -0.16759288463915256,
+            "max_dd_pct": 0.15909762074840486,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "SqueezeBreakout",
+        "tf": "4h",
+        "params": {
+            "bb_period": 20,
+            "kc_period": 20,
+            "trail_atr_multiplier": 3.0
+        },
+        "metrics": {
+            "run_id": "run_SqueezeBreakout_4h_3158",
+            "total_trades": 89,
+            "win_rate": 0.482037000512307,
+            "profit_factor": 1.1020508450255528,
+            "total_net_profit": 1289.4970141151691,
+            "sharpe": 1.860312009220602,
+            "sortino": 1.9124964278117553,
+            "calmar": 1.9212615443279688,
+            "max_dd_pct": 0.320033507081692,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "Donchian",
+        "tf": "1h",
+        "params": {
+            "channel_lookback": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_Donchian_1h_8942",
+            "total_trades": 235,
+            "win_rate": 0.3292481053890713,
+            "profit_factor": 2.2857452460676377,
+            "total_net_profit": 32024.10911274066,
+            "sharpe": 1.8438812457695493,
+            "sortino": 0.5163984264108268,
+            "calmar": -0.6616483948389829,
+            "max_dd_pct": 0.0642968761616815,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "BollReversion",
+        "tf": "5m",
+        "params": {
+            "period": 20,
+            "std_devs": 2.5,
+            "hold_bars": 5
+        },
+        "metrics": {
+            "run_id": "run_BollReversion_5m_2611",
+            "total_trades": 24,
+            "win_rate": 0.5502466633750771,
+            "profit_factor": 1.4913039887929762,
+            "total_net_profit": 12387.939619132265,
+            "sharpe": 1.801065222037062,
+            "sortino": 0.6122104407111215,
+            "calmar": 0.023005625685490916,
+            "max_dd_pct": 0.1654288036309786,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "ZScoreReversion",
+        "tf": "15m",
+        "params": {
+            "period": 30,
+            "z_threshold": 2.0,
+            "trail_atr_multiplier": 1.5
+        },
+        "metrics": {
+            "run_id": "run_ZScoreReversion_15m_8360",
+            "total_trades": 46,
+            "win_rate": 0.37736698356750065,
+            "profit_factor": 1.9444165808212097,
+            "total_net_profit": 9372.328709016429,
+            "sharpe": 1.7911153224811813,
+            "sortino": 1.3566070996933846,
+            "calmar": 1.8591222950649255,
+            "max_dd_pct": 0.2749390188434061,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "EMAPullback",
+        "tf": "15m",
+        "params": {
+            "fast_period": 21,
+            "slow_period": 50,
+            "pullback_tolerance": 0.001,
+            "trail_atr_multiplier": 1.5
+        },
+        "metrics": {
+            "run_id": "run_EMAPullback_15m_3286",
+            "total_trades": 50,
+            "win_rate": 0.5773369327680674,
+            "profit_factor": 1.5752663855801707,
+            "total_net_profit": 12022.027448939116,
+            "sharpe": 1.671467478364173,
+            "sortino": 2.937839526132852,
+            "calmar": -0.8428912947317904,
+            "max_dd_pct": 0.08221964065619036,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "Donchian",
+        "tf": "15m",
+        "params": {
+            "channel_lookback": 50,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_Donchian_15m_5547",
+            "total_trades": 186,
+            "win_rate": 0.6477268304233724,
+            "profit_factor": 2.0841503088729136,
+            "total_net_profit": 29319.88916096364,
+            "sharpe": 1.6145944030902415,
+            "sortino": 1.942431193158832,
+            "calmar": 0.94977166439839,
+            "max_dd_pct": 0.21513474923739284,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "ZScoreReversion",
+        "tf": "15m",
+        "params": {
+            "period": 30,
+            "z_threshold": 2.5,
+            "trail_atr_multiplier": 1.5
+        },
+        "metrics": {
+            "run_id": "run_ZScoreReversion_15m_9385",
+            "total_trades": 205,
+            "win_rate": 0.6420415652923007,
+            "profit_factor": 1.722514915469739,
+            "total_net_profit": 21346.79841341561,
+            "sharpe": 1.555190968218385,
+            "sortino": 0.7398872351785091,
+            "calmar": -0.14016627657563374,
+            "max_dd_pct": 0.0722635746902645,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "ATRBreakout",
+        "tf": "15m",
+        "params": {
+            "baseline_period": 20,
+            "atr_threshold": 2.0,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_ATRBreakout_15m_3195",
+            "total_trades": 458,
+            "win_rate": 0.6274514541609549,
+            "profit_factor": 1.3481488115335396,
+            "total_net_profit": 4724.308538892694,
+            "sharpe": 1.521850351495595,
+            "sortino": 2.3002682489505824,
+            "calmar": 1.6789604647818828,
+            "max_dd_pct": 0.15092293759152528,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "BollReversion",
+        "tf": "1h",
+        "params": {
+            "period": 20,
+            "std_devs": 2.5,
+            "hold_bars": 5
+        },
+        "metrics": {
+            "run_id": "run_BollReversion_1h_2474",
+            "total_trades": 407,
+            "win_rate": 0.35449211409139464,
+            "profit_factor": 2.4676065677114747,
+            "total_net_profit": 21193.686062164812,
+            "sharpe": 1.517302890353899,
+            "sortino": -0.33262489519578764,
+            "calmar": 0.43886716887226873,
+            "max_dd_pct": 0.10887361021266856,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "BollReversion",
+        "tf": "5m",
+        "params": {
+            "period": 20,
+            "std_devs": 2.0,
+            "hold_bars": 5
+        },
+        "metrics": {
+            "run_id": "run_BollReversion_5m_8427",
+            "total_trades": 22,
+            "win_rate": 0.5923498070290178,
+            "profit_factor": 2.101669541020293,
+            "total_net_profit": 20583.41437655097,
+            "sharpe": 1.5145994216438696,
+            "sortino": 2.501509196747625,
+            "calmar": 0.44575753073624513,
+            "max_dd_pct": 0.2770411421667401,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "ATRBreakout",
+        "tf": "5m",
+        "params": {
+            "baseline_period": 20,
+            "atr_threshold": 2.0,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_ATRBreakout_5m_4002",
+            "total_trades": 104,
+            "win_rate": 0.4814867581074741,
+            "profit_factor": 2.0160813710508823,
+            "total_net_profit": 29178.282876245878,
+            "sharpe": 1.395694240614719,
+            "sortino": 1.5108345703545543,
+            "calmar": 1.2694358205955298,
+            "max_dd_pct": 0.3989262498980762,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "Donchian",
+        "tf": "4h",
+        "params": {
+            "channel_lookback": 50,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_Donchian_4h_2698",
+            "total_trades": 74,
+            "win_rate": 0.44434138792530636,
+            "profit_factor": 1.4052956126038059,
+            "total_net_profit": 9215.262198100103,
+            "sharpe": 1.3566026081028246,
+            "sortino": 1.237156129353464,
+            "calmar": 1.4235787633508568,
+            "max_dd_pct": 0.3156931975742504,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "EMAPullback",
+        "tf": "4h",
+        "params": {
+            "fast_period": 21,
+            "slow_period": 50,
+            "pullback_tolerance": 0.0005,
+            "trail_atr_multiplier": 1.5
+        },
+        "metrics": {
+            "run_id": "run_EMAPullback_4h_9868",
+            "total_trades": 381,
+            "win_rate": 0.648451983637615,
+            "profit_factor": 2.166213771098314,
+            "total_net_profit": 11963.076431350239,
+            "sharpe": 1.2343722517192375,
+            "sortino": 0.9358238213064936,
+            "calmar": 1.4041639403682833,
+            "max_dd_pct": 0.22156683184993325,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "MACross",
+        "tf": "1h",
+        "params": {
+            "fast_period": 20,
+            "slow_period": 50,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_MACross_1h_4773",
+            "total_trades": 417,
+            "win_rate": 0.6793752095713941,
+            "profit_factor": 1.013033734579576,
+            "total_net_profit": 190.41255733309495,
+            "sharpe": 1.192412583449392,
+            "sortino": 0.4043862978677235,
+            "calmar": 1.263311962629933,
+            "max_dd_pct": 0.386929145882315,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "SqueezeBreakout",
+        "tf": "4h",
+        "params": {
+            "bb_period": 20,
+            "kc_period": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_SqueezeBreakout_4h_3878",
+            "total_trades": 296,
+            "win_rate": 0.3668616469184736,
+            "profit_factor": 1.5227580126977278,
+            "total_net_profit": 4153.251588786219,
+            "sharpe": 1.1608438559297256,
+            "sortino": 2.2791251395385643,
+            "calmar": 0.6425247443741391,
+            "max_dd_pct": 0.07430848208295979,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "MACross",
+        "tf": "4h",
+        "params": {
+            "fast_period": 20,
+            "slow_period": 50,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_MACross_4h_7143",
+            "total_trades": 459,
+            "win_rate": 0.5953868802967328,
+            "profit_factor": 1.473173156767909,
+            "total_net_profit": 11728.24684741161,
+            "sharpe": 1.1180693968992879,
+            "sortino": 1.1679300340952612,
+            "calmar": 1.655946212167085,
+            "max_dd_pct": 0.2949501267765158,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "VwapReversion",
+        "tf": "1h",
+        "params": {
+            "return_threshold_pct": 0.005,
+            "hold_bars": 24
+        },
+        "metrics": {
+            "run_id": "run_VwapReversion_1h_2941",
+            "total_trades": 179,
+            "win_rate": 0.6051760327274696,
+            "profit_factor": 1.0988316221759364,
+            "total_net_profit": 891.6819932796128,
+            "sharpe": 1.0892671796151716,
+            "sortino": 2.7973923069504987,
+            "calmar": 1.573839257905786,
+            "max_dd_pct": 0.19184461743180997,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "Donchian",
+        "tf": "1h",
+        "params": {
+            "channel_lookback": 20,
+            "trail_atr_multiplier": 3.0
+        },
+        "metrics": {
+            "run_id": "run_Donchian_1h_1035",
+            "total_trades": 299,
+            "win_rate": 0.5639499468600777,
+            "profit_factor": 1.1530395506404383,
+            "total_net_profit": 1057.2208178595513,
+            "sharpe": 0.8575841515702443,
+            "sortino": 1.9317340599120918,
+            "calmar": 0.3870734845198087,
+            "max_dd_pct": 0.16949519070299718,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "Donchian",
+        "tf": "4h",
+        "params": {
+            "channel_lookback": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_Donchian_4h_3581",
+            "total_trades": 403,
+            "win_rate": 0.6698331533360341,
+            "profit_factor": 1.8645510740321676,
+            "total_net_profit": 25783.468264618452,
+            "sharpe": 0.6748529504093832,
+            "sortino": 0.034971804703153975,
+            "calmar": 1.827360295839767,
+            "max_dd_pct": 0.18151173000011733,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "SqueezeBreakout",
+        "tf": "5m",
+        "params": {
+            "bb_period": 20,
+            "kc_period": 20,
+            "trail_atr_multiplier": 2.0
+        },
+        "metrics": {
+            "run_id": "run_SqueezeBreakout_5m_5587",
+            "total_trades": 464,
+            "win_rate": 0.5936379839964764,
+            "profit_factor": 2.355396646282886,
+            "total_net_profit": 32915.06728518907,
+            "sharpe": 0.6718643766102468,
+            "sortino": 2.488212135469371,
+            "calmar": -0.3510311964062608,
+            "max_dd_pct": 0.07846892556815994,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "BollReversion",
+        "tf": "15m",
+        "params": {
+            "period": 20,
+            "std_devs": 2.5,
+            "hold_bars": 5
+        },
+        "metrics": {
+            "run_id": "run_BollReversion_15m_6811",
+            "total_trades": 29,
+            "win_rate": 0.35480600376073274,
+            "profit_factor": 1.9296914677895591,
+            "total_net_profit": 8561.923697139657,
+            "sharpe": 0.6460329346988691,
+            "sortino": -0.21165418132994973,
+            "calmar": 0.5366879598806265,
+            "max_dd_pct": 0.3466646464158006,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "EMAPullback",
+        "tf": "5m",
+        "params": {
+            "fast_period": 21,
+            "slow_period": 50,
+            "pullback_tolerance": 0.001,
+            "trail_atr_multiplier": 1.5
+        },
+        "metrics": {
+            "run_id": "run_EMAPullback_5m_3742",
+            "total_trades": 307,
+            "win_rate": 0.4813235418729832,
+            "profit_factor": 1.2276831818949248,
+            "total_net_profit": 4902.75816199882,
+            "sharpe": 0.6007609335737589,
+            "sortino": 1.3014182601968585,
+            "calmar": 1.6680971711976884,
+            "max_dd_pct": 0.1436586443932202,
+            "status": "COMPLETED"
+        }
+    },
+    {
+        "name": "ZScoreReversion",
+        "tf": "1h",
+        "params": {
+            "period": 30,
+            "z_threshold": 2.0,
+            "trail_atr_multiplier": 1.5
+        },
+        "metrics": {
+            "run_id": "run_ZScoreReversion_1h_8170",
+            "total_trades": 53,
+            "win_rate": 0.474226402127814,
+            "profit_factor": 1.743014309046743,
+            "total_net_profit": 18112.590897990976,
+            "sharpe": 0.5639909440891442,
+            "sortino": -0.044126139482635385,
+            "calmar": 0.8728163426529278,
+            "max_dd_pct": 0.3799636803206417,
+            "status": "COMPLETED"
+        }
+    }
+]

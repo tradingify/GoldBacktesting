@@ -1,0 +1,56 @@
+# ── Fair Value Gap Standalone Validation ───────────────────────────────────────
+# Hypothesis: FVGs alone are NOT sufficient for a tradeable edge.
+# FVGs mark price imbalances; without directional bias from OBs/structure,
+# entry timing is unreliable.
+#
+# Expected result: FAIL or marginal PASS.
+# Marginal PASS is interesting because FVGs may be more precise entry zones
+# when combined with higher-TF confluence (tested in full_confluence.yaml).
+# ──────────────────────────────────────────────────────────────────────────────
+
+id: fvg_standalone_m15
+version: "1.0"
+hypothesis: "FVGs on M15 alone provide marginal or no edge without structural bias"
+expected_outcome: "FAIL"
+
+data:
+  symbol: XAUUSD
+  base_tf: M15
+  tf_stack: [M15]
+  start: "2025-09-11"
+  end: null
+
+indicators:
+  - type: fvg
+    timeframes: [M15]
+    params:
+      join_consecutive: true
+      join_gap_bars: 4
+
+entry:
+  signal: FVG_ACTIVE
+  direction: both
+  min_score: 1
+
+exit:
+  type: fixed_rr
+  rr: 2.0
+  sl_type: zone_edge       # Stop at opposite edge of the FVG zone
+  sl_buffer_pct: 0.001
+
+risk:
+  risk_per_trade_pct: 1.0
+  max_concurrent: 1
+
+falsification_gates:
+  min_trades: 30
+  min_sharpe: 0.5
+  min_pf: 1.0
+  max_dd_pct: -20.0
+  min_win_rate: 35.0
+
+notes: |
+  Part of Phase 2 concept isolation experiments.
+  If FVGs have edge alone, this is valuable information — they may
+  be the precision filter rather than the directional filter.
+  Compare with ob_standalone.yaml and full_confluence.yaml.

@@ -1,0 +1,1 @@
+"""\nPlaceholder for structure.py.\n"""\n\npass\n

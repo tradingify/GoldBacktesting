@@ -1,0 +1,16 @@
+# Portfolio and Trade Risk Rules
+
+portfolio:
+  starting_capital: 100000.0
+  currency: "USD"
+  leverage_limit: 100.0
+
+strategy_sizing:
+  fixed_fractional:
+    risk_per_trade_pct: 0.01   # 1% equity risk per trade baseline
+    max_position_size_pct: 0.10
+    max_exposure_per_strategy: 1.0 # Allow full notional use for Gold given high contract size
+
+  
+drawdown_limits:
+  hard_stop_pct: 0.20 # Halt execution if strat loses 20%

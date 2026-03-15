@@ -1,0 +1,35 @@
+{
+    "dataset_name": "xauusd_1_hour",
+    "timestamp_generated": "2026-03-09T20:20:36.111591Z",
+    "overall_status": "PASS",
+    "rows_analyzed": 12428,
+    "module_results": {
+        "schema_compliance": {
+            "passed": true,
+            "details": {
+                "passed": true,
+                "missing_columns": [],
+                "nan_counts": {}
+            }
+        },
+        "time_consistency": {
+            "passed": true,
+            "details": {
+                "passed": true,
+                "is_utc": true,
+                "duplicate_count": 0,
+                "is_monotonic": true,
+                "total_rows": 12428
+            }
+        },
+        "price_logic": {
+            "passed": true,
+            "details": {
+                "passed": true,
+                "negative_prices_count": 0,
+                "illogical_ohlc_count": 0,
+                "suspicious_spikes_count": 0
+            }
+        }
+    }
+}

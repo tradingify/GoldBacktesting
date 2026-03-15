@@ -1,0 +1,30 @@
+# OPERATING RULES (MANDATORY)
+# 1. Discovery comes first; do not treat this spec as portfolio-ready by default.
+# 2. Screening is required before any promotion decision.
+# 3. Eligible successful single runs must receive automatic walk-forward and stress validation.
+# 4. Only validated survivors may become candidate_for_portfolio.
+# 5. Rejected runs must not be included in portfolio construction.
+
+experiment:
+  id: "DEMO_AUG2025_SQUEEZE_5M"
+  description: "One-month real-data demo for SqueezeBreakout on XAUUSD 5m."
+
+dataset:
+  manifest_id: "xauusd_5_mins"
+  instrument_id: "XAUUSD-IDEALPRO-USD"
+  start_time: "2025-08-01T00:00:00+00:00"
+  end_time: "2025-08-31T23:59:59+00:00"
+
+strategy:
+  class_path: "src.gold_research.strategies.breakout.squeeze_breakout.SqueezeBreakout"
+  params:
+    timeframe: "5m"
+    bb_period: 20
+    kc_period: 20
+    trail_atr_multiplier: 2.0
+
+risk:
+  profile: "base"
+
+costs:
+  profile: "base"
